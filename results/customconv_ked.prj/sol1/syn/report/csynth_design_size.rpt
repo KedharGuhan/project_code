@@ -1,0 +1,92 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 8,369        | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 1,004        | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |   777        | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |   774        | user inline pragmas are applied                                                        |
+|               | (4) simplification          |   740        | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |   702        | user array partition pragmas are applied                                               |
+|               | (2) simplification          |   670        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |   670        | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |   670        | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |   751        | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |   658        | loop and instruction simplification                                                    |
+|               | (2) parallelization         |   630        | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |   630        | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |   630        | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |   648        | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |   686        | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++--------------------------------------+------------------------------------+-----------------+---------------+--------------+-------------+---------------+
+| Function                             | Location                           | Compile/Link    | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++--------------------------------------+------------------------------------+-----------------+---------------+--------------+-------------+---------------+
+| + Filter2d_accel                     | xf_custom_convolution_accel.cpp:89 | 8,369           | 740           | 751          | 630         | 686           |
+|  + Mat                               | xf_structs.hpp:670                 |   74 (2 calls)  |               |              |             |               |
+|   + init                             | xf_structs.hpp:605                 |   56 (2 calls)  |               |              |             |               |
+|      alloc_data<2, nullptr>          | xf_structs.hpp:493                 |    2 (2 calls)  |               |              |             |               |
+|  + Array2xfMat<8, 0, 128, 128, ...   | xf_utility.hpp:834                 | 1,674           | 125           | 108          | 107         | 121           |
+|   + Array2xfMat                      | xf_structs.hpp:1232                | 1,672           |               |              |             |               |
+|    + Axi2Mat                         | xf_structs.hpp:1135                | 1,665           |               |              |             |               |
+|     + Axi2AxiStream                  | xf_structs.hpp:1006                | 1,167           |               |              |             |               |
+|        addrbound                     | xf_structs.hpp:942                 |  800 (2 calls)  |               |              |             |               |
+|     + AxiStream2Mat                  | xf_structs.hpp:1107                |  472            |               |              |             |               |
+|        cols_npc_aligned              | xf_structs.hpp:930                 |    3            |               |              |             |               |
+|        last_blk_pxl_width            | xf_structs.hpp:932                 |   11            |               |              |             |               |
+|        AxiStream2MatStream<2>        | xf_structs.hpp:1031                |  448            |               |              |             |               |
+|   + Axi2Mat                          | xf_structs.hpp:1135                |                 | 121           | 104          | 103         | 117           |
+|      Axi2AxiStream                   | xf_structs.hpp:1006                |                 |  34           |  35          |  35         |  38           |
+|    + AxiStream2Mat                   | xf_structs.hpp:1107                |                 |  72           |  64          |  63         |  71           |
+|       cols_npc_aligned               | xf_structs.hpp:930                 |                 |   1           |              |             |               |
+|       last_blk_pxl_width             | xf_structs.hpp:932                 |                 |   3           |   3          |   3         |   3           |
+|       AxiStream2MatStream<2>         | xf_structs.hpp:1031                |                 |  58           |  58          |  57         |  63           |
+|  + filter2D<0, 3, 3, 0, 0, 128,...   | xf_custom_convolution.hpp:816      | 3,557           | 368           | 415          | 304         | 318           |
+|   + xFFilter2Dkernel<0, 0, 128, ...  | xf_custom_convolution.hpp:659      | 3,509           | 339           | 286          | 235         | 243           |
+|      borderInterpolate               | xf_custom_convolution.hpp:632      |   18 (2 calls)  |               |              |             |               |
+|      read<2, nullptr>                | xf_structs.hpp:541                 |   10            |               |              |             |               |
+|      xFApplyFilter2D<0, 0, 3, 3, ... | xf_custom_convolution.hpp:575      | 2,252           | 131           | 113          |  95         |  96           |
+|      write<2, nullptr>               | xf_structs.hpp:552                 |    8            |               |              |             |               |
+|  + xfMat2Array<8, 0, 128, 128, ...   | xf_utility.hpp:824                 | 2,925           | 156           | 142          | 136         | 144           |
+|   + xfMat2Array                      | xf_structs.hpp:1554                | 2,923           |               |              |             |               |
+|    + Mat2Axi                         | xf_structs.hpp:1405                | 2,916           |               |              |             |               |
+|       addrbound                      | xf_structs.hpp:942                 | 1,200 (3 calls) |               |              |             |               |
+|     + Mat2AxiStream                  | xf_structs.hpp:1345                | 1,349           |               |              |             |               |
+|        cols_npc_aligned              | xf_structs.hpp:930                 |    3            |               |              |             |               |
+|        last_blk_pxl_width            | xf_structs.hpp:932                 |   11            |               |              |             |               |
+|      + MatStream2AxiStream<2>        | xf_structs.hpp:1281                | 1,325           |               |              |             |               |
+|         cols_npc_aligned             | xf_structs.hpp:930                 |    3            |               |              |             |               |
+|       AxiStream2Axi                  | xf_structs.hpp:1373                |  242 (2 calls)  |               |              |             |               |
+|   + Mat2Axi                          | xf_structs.hpp:1405                |                 | 152           | 138          | 132         | 140           |
+|      addrbound                       | xf_structs.hpp:942                 |                 |  16           |  16          |  16         |  16           |
+|    + Mat2AxiStream                   | xf_structs.hpp:1345                |                 |  96           |  92          |  86         |  90           |
+|       cols_npc_aligned               | xf_structs.hpp:930                 |                 |   1           |              |             |               |
+|       last_blk_pxl_width             | xf_structs.hpp:932                 |                 |   3           |   3          |   3         |   3           |
+|       MatStream2AxiStream<2>         | xf_structs.hpp:1281                |                 |  82           |  86          |  80         |  82           |
+|      AxiStream2Axi                   | xf_structs.hpp:1373                |                 |  14           |  16          |  16         |  22           |
+|    pool_gpt                          | xf_custom_convolution_accel.cpp:3  |   98            |  37           |  42          |  39         |  44           |
+|    ~Mat                              | xf_structs.hpp:865                 |    2 (2 calls)  |               |              |             |               |
++--------------------------------------+------------------------------------+-----------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

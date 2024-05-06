@@ -1,0 +1,614 @@
+
+
+================================================================
+== Synthesis Summary Report of 'Filter2d_accel'
+================================================================
++ General Information: 
+    * Date:           Sat May  4 12:09:38 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        customconv_ked.prj
+    * Solution:       sol1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------------------------+--------+-------+------------+-----------+----------+------------+-------+----------+---------+---------+-------------+-------------+-----+
+    |                             Modules                             |  Issue |       |  Latency   |  Latency  | Iteration|            |  Trip |          |         |         |             |             |     |
+    |                             & Loops                             |  Type  | Slack |  (cycles)  |    (ns)   |  Latency |  Interval  | Count | Pipelined|  BRAM   |   DSP   |      FF     |     LUT     | URAM|
+    +-----------------------------------------------------------------+--------+-------+------------+-----------+----------+------------+-------+----------+---------+---------+-------------+-------------+-----+
+    |+ Filter2d_accel*                                                |  Timing|  -1.72|  4297523366|  1.776e+10|         -|  4297523364|      -|  dataflow|  11 (3%)|  15 (6%)|  13177 (12%)|  11660 (21%)|    -|
+    | + entry_proc7                                                   |       -|   1.21|           0|      0.000|         -|           0|      -|        no|        -|        -|      2 (~0%)|     28 (~0%)|    -|
+    | + Block_entry1_proc                                             |       -|   2.41|           0|      0.000|         -|           0|      -|        no|        -|        -|    130 (~0%)|     46 (~0%)|    -|
+    | + Array2xfMat_8_0_128_128_1_2_s                                 |  Timing|  -1.72|       32791|  1.355e+05|         -|       32791|      -|        no|        -|   4 (1%)|    2079 (1%)|    2133 (4%)|    -|
+    |  + Axi2Mat*                                                     |  Timing|  -1.72|       32789|  1.355e+05|         -|       32784|      -|  dataflow|        -|   4 (1%)|    2072 (1%)|    2059 (3%)|    -|
+    |   + Axi2AxiStream                                               |  Timing|  -1.72|         143|    590.947|         -|         143|      -|        no|        -|  1 (~0%)|     59 (~0%)|    328 (~0%)|    -|
+    |    + Axi2AxiStream_Pipeline_VITIS_LOOP_1021_1                   |  Timing|  -1.72|         131|    541.358|         -|         131|      -|        no|        -|        -|     28 (~0%)|     87 (~0%)|    -|
+    |     o VITIS_LOOP_1021_1                                         |       -|   2.41|         129|    533.093|         3|           1|    128|       yes|        -|        -|            -|            -|    -|
+    |   + AxiStream2Mat*                                              |  Timing|  -0.86|       32784|  1.082e+05|         -|       32784|      -|  dataflow|        -|   3 (1%)|    1716 (1%)|    1526 (2%)|    -|
+    |    + entry_proc5                                                |       -|   0.00|           0|      0.000|         -|           0|      -|        no|        -|        -|      2 (~0%)|     46 (~0%)|    -|
+    |    + last_blk_pxl_width                                         |       -|   1.21|           0|      0.000|         -|           0|      -|        no|        -|        -|      3 (~0%)|     19 (~0%)|    -|
+    |    + AxiStream2MatStream_2_s                                    |  Timing|  -0.86|       32783|  1.082e+05|         -|       32783|      -|        no|        -|   3 (1%)|    1412 (1%)|    1233 (2%)|    -|
+    |     + AxiStream2MatStream_2_Pipeline_MMIterInLoopRow            |       -|   0.31|       32777|  1.082e+05|         -|       32777|      -|        no|        -|        -|    1212 (1%)|    1115 (2%)|    -|
+    |      o MMIterInLoopRow                                          |      II|   2.41|       32775|  1.082e+05|        10|           2|  16384|       yes|        -|        -|            -|            -|    -|
+    | + filter2D_0_3_3_0_0_128_128_1_2_2_s                            |  Timing|  -1.23|  4297523363|  1.562e+10|         -|  4297523363|      -|        no|   3 (1%)|   9 (4%)|    3351 (3%)|    2039 (3%)|    -|
+    |  + filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2          |  Timing|  -1.18|          11|     39.523|         -|          11|      -|        no|        -|        -|    161 (~0%)|    117 (~0%)|    -|
+    |   o VITIS_LOOP_834_1_VITIS_LOOP_835_2                           |       -|   2.41|           9|     32.337|         2|           1|      9|       yes|        -|        -|            -|            -|    -|
+    |  + xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s       |  Timing|  -1.23|  4297523341|  1.562e+10|         -|  4297523341|      -|        no|   3 (1%)|   9 (4%)|    3080 (2%)|    1684 (3%)|    -|
+    |   o ROW_LOOP                                                    |       -|   2.41|  4297523340|  1.562e+10|     65571|           -|  65540|        no|        -|        -|            -|            -|    -|
+    |    + xFFilter2Dkernel_Pipeline_COL_LOOP                         |  Timing|  -1.23|       65566|  2.383e+05|         -|       65566|      -|        no|   3 (1%)|   9 (4%)|    2820 (2%)|    1301 (2%)|    -|
+    |     o COL_LOOP                                                  |       -|   2.41|       65564|  2.383e+05|        29|           1|  65537|       yes|        -|        -|            -|            -|    -|
+    |      + xFApplyFilter2D_0_0_3_3_1_s                              |  Timing|  -0.26|          19|     62.700|         -|           1|      -|       yes|        -|   9 (4%)|    1791 (1%)|     552 (1%)|    -|
+    | + xfMat2Array_8_0_128_128_1_2_1_s                               |  Timing|  -0.43|       32783|  1.082e+05|         -|       32783|      -|        no|        -|  2 (~0%)|    1578 (1%)|    1709 (3%)|    -|
+    |  + Mat2Axi*                                                     |  Timing|  -0.43|       32782|  1.082e+05|         -|       32782|      -|  dataflow|        -|  2 (~0%)|    1492 (1%)|    1630 (3%)|    -|
+    |   + addrbound                                                   |  Timing|  -0.14|           4|     13.200|         -|           4|      -|        no|        -|  1 (~0%)|     36 (~0%)|     44 (~0%)|    -|
+    |   + Mat2AxiStream*                                              |       -|   0.11|       32782|  1.082e+05|         -|       32782|      -|  dataflow|        -|  1 (~0%)|    920 (~0%)|     920 (1%)|    -|
+    |    + entry_proc                                                 |       -|   1.21|           0|      0.000|         -|           0|      -|        no|        -|        -|      2 (~0%)|     28 (~0%)|    -|
+    |    + last_blk_pxl_width_1                                       |       -|   1.21|           0|      0.000|         -|           0|      -|        no|        -|        -|      3 (~0%)|     19 (~0%)|    -|
+    |    + MatStream2AxiStream_2_s                                    |       -|   0.11|       32781|  1.082e+05|         -|       32781|      -|        no|        -|  1 (~0%)|    616 (~0%)|     645 (1%)|    -|
+    |     + MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol  |       -|   0.11|       32775|  1.082e+05|         -|       32775|      -|        no|        -|        -|    406 (~0%)|    504 (~0%)|    -|
+    |      o MMIterOutRow_MMIterOutCol                                |      II|   2.41|       32773|  1.082e+05|         8|           2|  16384|       yes|        -|        -|            -|            -|    -|
+    |   + entry_proc6                                                 |       -|   1.21|           0|      0.000|         -|           0|      -|        no|        -|        -|      2 (~0%)|     19 (~0%)|    -|
+    |   + Mat2Axi_Block_entry24_proc                                  |       -|   1.21|           0|      0.000|         -|           0|      -|        no|        -|        -|     17 (~0%)|     19 (~0%)|    -|
+    |   + AxiStream2Axi                                               |  Timing|  -0.43|       16395|  5.410e+04|         -|       16395|      -|        no|        -|        -|    118 (~0%)|    321 (~0%)|    -|
+    |    + AxiStream2Axi_Pipeline_MMIterOutLoop2                      |  Timing|  -0.43|       16387|  5.408e+04|         -|       16387|      -|        no|        -|        -|     43 (~0%)|     92 (~0%)|    -|
+    |     o MMIterOutLoop2                                            |       -|   2.41|       16385|  5.407e+04|         3|           1|  16384|       yes|        -|        -|            -|            -|    -|
+    | + pool_gpt                                                      |  Timing|  -1.01|       16406|  5.614e+04|         -|       16406|      -|        no|        -|        -|   1050 (~0%)|     726 (1%)|    -|
+    |  + pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2             |  Timing|  -1.01|       16398|  5.611e+04|         -|       16398|      -|        no|        -|        -|    911 (~0%)|    479 (~0%)|    -|
+    |   o VITIS_LOOP_9_1_VITIS_LOOP_10_2                              |      II|   2.41|       16396|  5.611e+04|        17|           4|   4096|       yes|        -|        -|            -|            -|    -|
+    +-----------------------------------------------------------------+--------+-------+------------+-----------+----------+------------+-------+----------+---------+---------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | 8 -> 8     | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem1 | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem2 | 8 -> 8     | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem3 | 8 -> 8     | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 6             | 16     | 0        |
+| s_axi_control_r | 32         | 6             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+---------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register      | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------------+---------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL          | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER          | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control   | IP_IER        | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR        | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control   | shift         | 0x10   | 32    | W      | Data signal of shift             |                                                                      |
+| s_axi_control   | rows          | 0x18   | 32    | W      | Data signal of rows              |                                                                      |
+| s_axi_control   | cols          | 0x20   | 32    | W      | Data signal of cols              |                                                                      |
+| s_axi_control_r | img_in_1      | 0x10   | 32    | W      | Data signal of img_in            |                                                                      |
+| s_axi_control_r | img_in_2      | 0x14   | 32    | W      | Data signal of img_in            |                                                                      |
+| s_axi_control_r | filter_1      | 0x1c   | 32    | W      | Data signal of filter            |                                                                      |
+| s_axi_control_r | filter_2      | 0x20   | 32    | W      | Data signal of filter            |                                                                      |
+| s_axi_control_r | conv_out_1    | 0x28   | 32    | W      | Data signal of conv_out          |                                                                      |
+| s_axi_control_r | conv_out_2    | 0x2c   | 32    | W      | Data signal of conv_out          |                                                                      |
+| s_axi_control_r | maxpool_out_1 | 0x34   | 32    | W      | Data signal of maxpool_out       |                                                                      |
+| s_axi_control_r | maxpool_out_2 | 0x38   | 32    | W      | Data signal of maxpool_out       |                                                                      |
++-----------------+---------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+---------------+
+| Argument    | Direction | Datatype      |
++-------------+-----------+---------------+
+| img_in      | in        | ap_uint<8>*   |
+| filter      | in        | short*        |
+| shift       | in        | unsigned char |
+| conv_out    | inout     | ap_uint<8>*   |
+| maxpool_out | out       | ap_uint<8>*   |
+| rows        | in        | int           |
+| cols        | in        | int           |
++-------------+-----------+---------------+
+
+* SW-to-HW Mapping
++-------------+-----------------+-----------+----------+-----------------------------------------+
+| Argument    | HW Interface    | HW Type   | HW Usage | HW Info                                 |
++-------------+-----------------+-----------+----------+-----------------------------------------+
+| img_in      | m_axi_gmem0     | interface |          |                                         |
+| img_in      | s_axi_control_r | register  | offset   | name=img_in_1 offset=0x10 range=32      |
+| img_in      | s_axi_control_r | register  | offset   | name=img_in_2 offset=0x14 range=32      |
+| filter      | m_axi_gmem1     | interface |          |                                         |
+| filter      | s_axi_control_r | register  | offset   | name=filter_1 offset=0x1c range=32      |
+| filter      | s_axi_control_r | register  | offset   | name=filter_2 offset=0x20 range=32      |
+| shift       | s_axi_control   | register  |          | name=shift offset=0x10 range=32         |
+| conv_out    | m_axi_gmem2     | interface |          |                                         |
+| conv_out    | s_axi_control_r | register  | offset   | name=conv_out_1 offset=0x28 range=32    |
+| conv_out    | s_axi_control_r | register  | offset   | name=conv_out_2 offset=0x2c range=32    |
+| maxpool_out | m_axi_gmem3     | interface |          |                                         |
+| maxpool_out | s_axi_control_r | register  | offset   | name=maxpool_out_1 offset=0x34 range=32 |
+| maxpool_out | s_axi_control_r | register  | offset   | name=maxpool_out_2 offset=0x38 range=32 |
+| rows        | s_axi_control   | register  |          | name=rows offset=0x18 range=32          |
+| cols        | s_axi_control   | register  |          | name=cols offset=0x20 range=32          |
++-------------+-----------------+-----------+----------+-----------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+----------+-------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| HW Interface | Direction | Length   | Width | Loop              | Loop Location                                                                                                                   |
++--------------+-----------+----------+-------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | read      | variable | 8     | VITIS_LOOP_1021_1 | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021:21                    |
+| m_axi_gmem1  | read      | 9        | 16    | VITIS_LOOP_834_1  | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834:20         |
+| m_axi_gmem2  | read      | 2        | 8     |                   |                                                                                                                                 |
+| m_axi_gmem2  | write     | variable | 8     | MMIterOutLoop2    | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1379:9                     |
+| m_axi_gmem3  | write     | 4096     | 8     | VITIS_LOOP_9_1    | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:9:21 |
++--------------+-----------+----------+-------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+----------------------------------------------------------------------------------------------------------------------------------+-----------+--------------+----------+-------------------+----------------------------------------------------------------------------------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                                                                                                  | Direction | Burst Status | Length   | Loop              | Loop Location                                                                                                                    | Resolution | Problem                                                                                               |
++--------------+----------+----------------------------------------------------------------------------------------------------------------------------------+-----------+--------------+----------+-------------------+----------------------------------------------------------------------------------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | din      | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1026:7                      | read      | Widen Fail   |          | VITIS_LOOP_1021_1 | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021:21                     | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
+| m_axi_gmem0  | din      | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1026:7                      | read      | Inferred     | variable | VITIS_LOOP_1021_1 | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021:21                     |            |                                                                                                       |
+| m_axi_gmem1  | filter   | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:836:29          | read      | Widen Fail   |          | VITIS_LOOP_835_2  | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:835:27          | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | filter   | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:836:29          | read      | Inferred     | 9        | VITIS_LOOP_834_1  | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834:20          |            |                                                                                                       |
+| m_axi_gmem2  | pool_in  | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:21:44 | read      | Widen Fail   |          | VITIS_LOOP_16_4   | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:16:34 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
+| m_axi_gmem2  | pool_in  | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:21:44 | read      | Fail         |          | VITIS_LOOP_15_3   | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:15:30 | 214-230    | Stride is incompatible                                                                                |
+| m_axi_gmem2  | pool_in  | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:21:44 | read      | Inferred     | 2        | VITIS_LOOP_16_4   | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:16:34 |            |                                                                                                       |
+| m_axi_gmem2  | dout     | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1384:10                     | write     | Widen Fail   |          | MMIterOutLoop2    | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1379:9                      | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
+| m_axi_gmem2  | dout     | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1384:10                     | write     | Inferred     | variable | MMIterOutLoop2    | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1379:9                      |            |                                                                                                       |
+| m_axi_gmem3  | pool_out | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:37:36 | write     | Widen Fail   |          | VITIS_LOOP_10_2   | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:10:26 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
+| m_axi_gmem3  | pool_out | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:37:36 | write     | Inferred     | 4096     | VITIS_LOOP_9_1    | /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:9:21  |            |                                                                                                       |
++--------------+----------+----------------------------------------------------------------------------------------------------------------------------------+-----------+--------------+----------+-------------------+----------------------------------------------------------------------------------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------------------+-----+--------+---------------+-----+-----------+---------+
+| Name                                                            | DSP | Pragma | Variable      | Op  | Impl      | Latency |
++-----------------------------------------------------------------+-----+--------+---------------+-----+-----------+---------+
+| + Filter2d_accel                                                | 15  |        |               |     |           |         |
+|  + Array2xfMat_8_0_128_128_1_2_s                                | 4   |        |               |     |           |         |
+|   + Axi2Mat                                                     | 4   |        |               |     |           |         |
+|    + Axi2AxiStream                                              | 1   |        |               |     |           |         |
+|      mul_15s_15s_15_3_1_U11                                     | 1   | yes    | mul_rows_cols | mul | dsp       | 3       |
+|     + Axi2AxiStream_Pipeline_VITIS_LOOP_1021_1                  | 0   |        |               |     |           |         |
+|       c_2_fu_106_p2                                             |     |        | c_2           | add | fabric    | 0       |
+|    + AxiStream2Mat                                              | 3   |        |               |     |           |         |
+|     + AxiStream2MatStream_2_s                                   | 3   |        |               |     |           |         |
+|       mul_32s_32s_32_5_1_U39                                    | 3   |        | bound         | mul | dsp       | 4       |
+|       sub_fu_85_p2                                              |     |        | sub           | add | fabric    | 0       |
+|       sub3_fu_91_p2                                             |     |        | sub3          | sub | fabric    | 0       |
+|      + AxiStream2MatStream_2_Pipeline_MMIterInLoopRow           | 0   |        |               |     |           |         |
+|        add_ln1054_fu_203_p2                                     |     |        | add_ln1054    | add | fabric    | 0       |
+|        add_ln1074_fu_284_p2                                     |     |        | add_ln1074    | add | fabric    | 0       |
+|        sub_ln1074_fu_340_p2                                     |     |        | sub_ln1074    | sub | fabric    | 0       |
+|        sub_ln1074_1_fu_345_p2                                   |     |        | sub_ln1074_1  | sub | fabric    | 0       |
+|        sub_ln1074_2_fu_407_p2                                   |     |        | sub_ln1074_2  | sub | fabric    | 0       |
+|        sub_ln1074_3_fu_411_p2                                   |     |        | sub_ln1074_3  | sub | fabric    | 0       |
+|        rem_3_fu_289_p2                                          |     |        | rem_3         | sub | fabric    | 0       |
+|        sub_ln1067_fu_299_p2                                     |     |        | sub_ln1067    | sub | fabric    | 0       |
+|        add_ln1071_fu_305_p2                                     |     |        | add_ln1071    | add | fabric    | 0       |
+|        sub_ln1071_fu_315_p2                                     |     |        | sub_ln1071    | sub | fabric    | 0       |
+|        rem_2_fu_321_p2                                          |     |        | rem_2         | add | fabric    | 0       |
+|        sub_ln1082_fu_214_p2                                     |     |        | sub_ln1082    | sub | fabric    | 0       |
+|        add_ln1086_fu_224_p2                                     |     |        | add_ln1086    | add | fabric    | 0       |
+|  + filter2D_0_3_3_0_0_128_128_1_2_2_s                           | 9   |        |               |     |           |         |
+|   + filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2         | 0   |        |               |     |           |         |
+|     add_ln834_fu_220_p2                                         |     |        | add_ln834     | add | fabric    | 0       |
+|     add_ln834_1_fu_252_p2                                       |     |        | add_ln834_1   | add | fabric    | 0       |
+|     add_ln835_fu_266_p2                                         |     |        | add_ln835     | add | fabric    | 0       |
+|   + xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s      | 9   |        |               |     |           |         |
+|     heightloop_fu_239_p2                                        |     |        | heightloop    | add | fabric    | 0       |
+|     widthloop_fu_249_p2                                         |     |        | widthloop     | add | fabric    | 0       |
+|     sub62_fu_255_p2                                             |     |        | sub62         | add | fabric    | 0       |
+|     i_2_fu_282_p2                                               |     |        | i_2           | add | fabric    | 0       |
+|     ImagLocy_fu_288_p2                                          |     |        | ImagLocy      | add | fabric    | 0       |
+|     locy_fu_411_p2                                              |     |        | locy          | sub | fabric    | 0       |
+|     y_1_fu_416_p2                                               |     |        | y_1           | add | fabric    | 0       |
+|     locy_1_fu_454_p2                                            |     |        | locy_1        | sub | fabric    | 0       |
+|     y_2_fu_344_p2                                               |     |        | y_2           | add | fabric    | 0       |
+|     locy_2_fu_478_p2                                            |     |        | locy_2        | sub | fabric    | 0       |
+|    + xFFilter2Dkernel_Pipeline_COL_LOOP                         | 9   |        |               |     |           |         |
+|      j_2_fu_437_p2                                              |     |        | j_2           | add | fabric    | 0       |
+|      ImagLocx_fu_443_p2                                         |     |        | ImagLocx      | add | fabric    | 0       |
+|     + xFApplyFilter2D_0_0_3_3_1_s                               | 9   |        |               |     |           |         |
+|       mac_muladd_16s_8ns_24s_25_4_0_U84                         | 1   |        | temp_10       | mul | dsp_slice | 3       |
+|       mul_16s_8ns_24_4_0_U80                                    | 1   |        | temp          | mul | auto      | 3       |
+|       mac_muladd_16s_8ns_24s_25_4_0_U84                         | 1   |        | sum_1         | add | dsp_slice | 3       |
+|       mul_16s_8ns_24_4_0_U81                                    | 1   |        | temp_3        | mul | auto      | 3       |
+|       mac_muladd_16s_8ns_24s_25_4_0_U85                         | 1   |        | temp_4        | mul | dsp_slice | 3       |
+|       mac_muladd_16s_8ns_24s_25_4_0_U85                         | 1   |        | add_ln607     | add | dsp_slice | 3       |
+|       sum_2_fu_257_p2                                           |     |        | sum_2         | add | fabric    | 0       |
+|       mac_muladd_16s_8ns_26s_27_4_0_U88                         | 1   |        | temp_5        | mul | dsp_slice | 3       |
+|       mac_muladd_16s_8ns_25s_26_4_0_U87                         | 1   |        | temp_6        | mul | dsp_slice | 3       |
+|       mul_16s_8ns_24_4_0_U82                                    | 1   |        | temp_7        | mul | auto      | 3       |
+|       mac_muladd_16s_8ns_24s_25_4_0_U86                         | 1   |        | temp_8        | mul | dsp_slice | 3       |
+|       mac_muladd_16s_8ns_26s_27_4_0_U88                         | 1   |        | add_ln607_2   | add | dsp_slice | 3       |
+|       mac_muladd_16s_8ns_24s_25_4_0_U86                         | 1   |        | add_ln607_3   | add | dsp_slice | 3       |
+|       mac_muladd_16s_8ns_25s_26_4_0_U87                         | 1   |        | add_ln607_4   | add | dsp_slice | 3       |
+|       sum_3_fu_278_p2                                           |     |        | sum_3         | add | fabric    | 0       |
+|       mac_muladd_16s_8ns_27s_28_4_0_U89                         | 1   |        | temp_9        | mul | dsp_slice | 3       |
+|       mac_muladd_16s_8ns_27s_28_4_0_U89                         | 1   |        | sum_4         | add | dsp_slice | 3       |
+|  + xfMat2Array_8_0_128_128_1_2_1_s                              | 2   |        |               |     |           |         |
+|   + Mat2Axi                                                     | 2   |        |               |     |           |         |
+|    + addrbound                                                  | 1   |        |               |     |           |         |
+|      mul_15s_15s_15_3_1_U176                                    | 1   | yes    | mul_rows_cols | mul | dsp       | 3       |
+|    + Mat2AxiStream                                              | 1   |        |               |     |           |         |
+|     + MatStream2AxiStream_2_s                                   | 1   |        |               |     |           |         |
+|       sub_fu_111_p2                                             |     |        | sub           | add | fabric    | 0       |
+|       mul_16ns_16ns_32_4_1_U200                                 | 1   |        | bound         | mul | auto      | 3       |
+|      + MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol | 0   |        |               |     |           |         |
+|        add_ln1301_fu_198_p2                                     |     |        | add_ln1301    | add | fabric    | 0       |
+|        sub_ln1324_fu_262_p2                                     |     |        | sub_ln1324    | sub | fabric    | 0       |
+|        sub_ln1332_fu_274_p2                                     |     |        | sub_ln1332    | sub | fabric    | 0       |
+|        sub_ln1332_1_fu_292_p2                                   |     |        | sub_ln1332_1  | sub | fabric    | 0       |
+|        filled_next_fu_321_p2                                    |     |        | filled_next   | add | fabric    | 0       |
+|        add_ln1306_fu_233_p2                                     |     |        | add_ln1306    | add | fabric    | 0       |
+|    + AxiStream2Axi                                              | 0   |        |               |     |           |         |
+|     + AxiStream2Axi_Pipeline_MMIterOutLoop2                     | 0   |        |               |     |           |         |
+|       add_ln1379_fu_102_p2                                      |     |        | add_ln1379    | add | fabric    | 0       |
+|  + pool_gpt                                                     | 0   |        |               |     |           |         |
+|   + pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2            | 0   |        |               |     |           |         |
+|     add_ln9_fu_154_p2                                           |     |        | add_ln9       | add | fabric    | 0       |
+|     add_ln9_1_fu_186_p2                                         |     |        | add_ln9_1     | add | fabric    | 0       |
+|     add_64ns_64ns_64_2_1_U237                                   |     |        | empty_48      | add | fabric    | 1       |
+|     add_64ns_64ns_64_2_1_U238                                   |     |        | empty_50      | add | fabric    | 1       |
+|     add_ln10_fu_242_p2                                          |     |        | add_ln10      | add | fabric    | 0       |
++-----------------------------------------------------------------+-----+--------+---------------+-----+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++------------------------------------------------------------+---------------+-------------+------+------+--------+---------------------------+------+---------+------------------+
+| Name                                                       | Usage         | Type        | BRAM | URAM | Pragma | Variable                  | Impl | Latency | Bitwidth, Depth, |
+|                                                            |               |             |      |      |        |                           |      |         | Banks            |
++------------------------------------------------------------+---------------+-------------+------+------+--------+---------------------------+------+---------+------------------+
+| + Filter2d_accel                                           |               |             | 11   | 0    |        |                           |      |         |                  |
+|   control_s_axi_U                                          | interface     | s_axilite   |      |      |        |                           |      |         |                  |
+|   control_r_s_axi_U                                        | interface     | s_axilite   |      |      |        |                           |      |         |                  |
+|   gmem0_m_axi_U                                            | interface     | m_axi       | 2    |      |        |                           |      |         |                  |
+|   gmem1_m_axi_U                                            | interface     | m_axi       | 2    |      |        |                           |      |         |                  |
+|   gmem2_m_axi_U                                            | interface     | m_axi       | 2    |      |        |                           |      |         |                  |
+|   gmem3_m_axi_U                                            | interface     | m_axi       | 2    |      |        |                           |      |         |                  |
+|   conv_out_c11_U                                           | fifo channel  | scalar prop |      |      |        | conv_out_c11              | srl  | 0       | 64, 5, 1         |
+|   maxpool_out_c_U                                          | fifo channel  | scalar prop |      |      |        | maxpool_out_c             | srl  | 0       | 64, 6, 1         |
+|   imgOutput_rows_channel_U                                 | fifo channel  | task level  |      |      |        | imgOutput_rows_channel    | srl  | 0       | 32, 4, 1         |
+|   imgOutput_cols_channel_U                                 | fifo channel  | task level  |      |      |        | imgOutput_cols_channel    | srl  | 0       | 32, 4, 1         |
+|   imgInput_rows_c12_channel_U                              | fifo channel  | task level  |      |      |        | imgInput_rows_c12_channel | srl  | 0       | 32, 2, 1         |
+|   imgInput_cols_c13_channel_U                              | fifo channel  | task level  |      |      |        | imgInput_cols_c13_channel | srl  | 0       | 32, 2, 1         |
+|   imgInput_data_U                                          | fifo channel  | stream      |      |      |        | imgInput_data             | srl  | 0       | 8, 2, 1          |
+|   imgInput_rows_c_U                                        | fifo channel  | scalar prop |      |      |        | imgInput_rows_c           | srl  | 0       | 32, 2, 1         |
+|   imgInput_cols_c_U                                        | fifo channel  | scalar prop |      |      |        | imgInput_cols_c           | srl  | 0       | 32, 2, 1         |
+|   imgOutput_data_U                                         | fifo channel  | stream      |      |      |        | imgOutput_data            | srl  | 0       | 8, 2, 1          |
+|   conv_out_c_U                                             | fifo channel  | scalar prop |      |      |        | conv_out_c                | srl  | 0       | 64, 2, 1         |
+|  + Array2xfMat_8_0_128_128_1_2_s                           |               |             | 0    | 0    |        |                           |      |         |                  |
+|   + Axi2Mat                                                |               |             | 0    | 0    |        |                           |      |         |                  |
+|     ldata_U                                                | fifo channel  | stream      |      |      |        | ldata                     | srl  | 0       | 8, 2, 1          |
+|     rows_c_U                                               | fifo channel  | scalar prop |      |      |        | rows_c                    | srl  | 0       | 32, 2, 1         |
+|     cols_c_U                                               | fifo channel  | scalar prop |      |      |        | cols_c                    | srl  | 0       | 32, 2, 1         |
+|    + AxiStream2Mat                                         |               |             | 0    | 0    |        |                           |      |         |                  |
+|      rows_c_U                                              | fifo channel  | scalar prop |      |      |        | rows_c                    | srl  | 0       | 32, 3, 1         |
+|      cols_c_U                                              | fifo channel  | scalar prop |      |      |        | cols_c                    | srl  | 0       | 32, 3, 1         |
+|      last_blk_width_channel_U                              | fifo channel  | task level  |      |      |        | last_blk_width_channel    | srl  | 0       | 4, 2, 1          |
+|  + filter2D_0_3_3_0_0_128_128_1_2_2_s                      |               |             | 3    | 0    |        |                           |      |         |                  |
+|   + xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s |               |             | 3    | 0    |        |                           |      |         |                  |
+|    + xFFilter2Dkernel_Pipeline_COL_LOOP                    |               |             | 3    | 0    |        |                           |      |         |                  |
+|      k_buf_U                                               | ram_s2p array |             | 1    |      |        | k_buf                     | auto | 2       | 8, 128, 1        |
+|      k_buf_1_U                                             | ram_s2p array |             | 1    |      |        | k_buf_1                   | auto | 2       | 8, 128, 1        |
+|      k_buf_2_U                                             | ram_s2p array |             | 1    |      |        | k_buf_2                   | auto | 2       | 8, 128, 1        |
+|  + xfMat2Array_8_0_128_128_1_2_1_s                         |               |             | 0    | 0    |        |                           |      |         |                  |
+|   + Mat2Axi                                                |               |             | 0    | 0    |        |                           |      |         |                  |
+|     dout_c_U                                               | fifo channel  | scalar prop |      |      |        | dout_c                    | srl  | 0       | 64, 4, 1         |
+|     p_channel_U                                            | fifo channel  | task level  |      |      |        | p_channel                 | srl  | 0       | 15, 2, 1         |
+|     axibound_U                                             | fifo channel  | task level  |      |      |        | axibound                  | srl  | 0       | 15, 2, 1         |
+|     ldata_U                                                | fifo channel  | stream      |      |      |        | ldata                     | srl  | 0       | 8, 2, 1          |
+|    + Mat2AxiStream                                         |               |             | 0    | 0    |        |                           |      |         |                  |
+|      rows_c_U                                              | fifo channel  | scalar prop |      |      |        | rows_c                    | srl  | 0       | 16, 3, 1         |
+|      cols_c_U                                              | fifo channel  | scalar prop |      |      |        | cols_c                    | srl  | 0       | 32, 3, 1         |
+|      last_blk_width_channel_U                              | fifo channel  | task level  |      |      |        | last_blk_width_channel    | srl  | 0       | 4, 2, 1          |
++------------------------------------------------------------+---------------+-------------+------+------+--------+---------------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++---------------+------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type          | Options                                  | Location                                                                                              | Messages                                                                                                                                                                           |
++---------------+------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow      |                                          | ../../include/common/xf_structs.hpp:1141 in axi2mat                                                   | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow      |                                          | ../../include/common/xf_structs.hpp:1411 in mat2axi                                                   | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| array_reshape | variable=val factor=RESHAPE_FACTOR dim=1 | ../../include/common/xf_video_mem.hpp:759 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'factor' in '#pragma HLS array_reshape' is ignored                                                                                                                                 |
++---------------+------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+-----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+| Type            | Options                                                               | Location                                                                                              |
++-----------------+-----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:245 in scalar<n, t>                                               |
+| array_partition | variable=val dim=1 complete                                           | ../../include/common/xf_structs.hpp:246 in scalar<n, t>, val                                          |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:252 in scalar<n, t>                                               |
+| array_partition | variable=val dim=1 complete                                           | ../../include/common/xf_structs.hpp:253 in scalar<n, t>, val                                          |
+| array_partition | variable=val dim=1 complete                                           | ../../include/common/xf_structs.hpp:260 in scalar<n, t>, val                                          |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:261 in scalar<n, t>                                               |
+| array_partition | variable=val dim=1 complete                                           | ../../include/common/xf_structs.hpp:269 in scalar<n, t>, val                                          |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:270 in scalar<n, t>                                               |
+| array_partition | variable=val dim=1 complete                                           | ../../include/common/xf_structs.hpp:279 in scalar<n, t>, val                                          |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:280 in scalar<n, t>                                               |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:305 in operator=                                                  |
+| unroll          |                                                                       | ../../include/common/xf_structs.hpp:309 in operator=                                                  |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:318 in operator+                                                  |
+| unroll          |                                                                       | ../../include/common/xf_structs.hpp:323 in operator+                                                  |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:333 in operator+                                                  |
+| unroll          |                                                                       | ../../include/common/xf_structs.hpp:338 in operator+                                                  |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:348 in operator-                                                  |
+| unroll          |                                                                       | ../../include/common/xf_structs.hpp:353 in operator-                                                  |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:363 in operator-                                                  |
+| unroll          |                                                                       | ../../include/common/xf_structs.hpp:368 in operator-                                                  |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:378 in operator*                                                  |
+| unroll          |                                                                       | ../../include/common/xf_structs.hpp:383 in operator*                                                  |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:393 in operator*                                                  |
+| unroll          |                                                                       | ../../include/common/xf_structs.hpp:398 in operator*                                                  |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:408 in operator/                                                  |
+| unroll          |                                                                       | ../../include/common/xf_structs.hpp:413 in operator/                                                  |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:423 in operator/                                                  |
+| unroll          |                                                                       | ../../include/common/xf_structs.hpp:428 in operator/                                                  |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:584 in type                                                       |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:592 in depth                                                      |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:599 in channels                                                   |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:607 in init                                                       |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:654 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:663 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:672 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:681 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:708 in copyto                                                     |
+| inline          |                                                                       | ../../include/common/xf_structs.hpp:742 in copyfrom                                                   |
+| bind_op         | variable=mul_rows_cols op=mul impl=dsp latency=2                      | ../../include/common/xf_structs.hpp:949 in addrbound, mul_rows_cols                                   |
+| loop_tripcount  | min=1 max=ADDRBOUND                                                   | ../../include/common/xf_structs.hpp:984 in axi2axistream                                              |
+| pipeline        |                                                                       | ../../include/common/xf_structs.hpp:985 in axi2axistream                                              |
+| loop_tripcount  | min=1 max=ADDRBOUND                                                   | ../../include/common/xf_structs.hpp:998 in axi2axistream                                              |
+| pipeline        |                                                                       | ../../include/common/xf_structs.hpp:999 in axi2axistream                                              |
+| loop_tripcount  | min=1 max=ROWS                                                        | ../../include/common/xf_structs.hpp:1019 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=COLS_ADDRBOUND                                              | ../../include/common/xf_structs.hpp:1023 in axi2axistream                                             |
+| pipeline        | II=1                                                                  | ../../include/common/xf_structs.hpp:1024 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=LOOPBOUND                                                   | ../../include/common/xf_structs.hpp:1056 in axistream2matstream                                       |
+| pipeline        |                                                                       | ../../include/common/xf_structs.hpp:1057 in axistream2matstream                                       |
+| loop_tripcount  | min=1 max=LOOPBOUND                                                   | ../../include/common/xf_structs.hpp:1100 in matstream2mat                                             |
+| pipeline        |                                                                       | ../../include/common/xf_structs.hpp:1101 in matstream2mat                                             |
+| dataflow        |                                                                       | ../../include/common/xf_structs.hpp:1113 in axistream2mat                                             |
+| dataflow        |                                                                       | ../../include/common/xf_structs.hpp:1126 in axistream2mat                                             |
+| dataflow        |                                                                       | ../../include/common/xf_structs.hpp:1164 in axi2mat                                                   |
+| dataflow        |                                                                       | ../../include/common/xf_structs.hpp:1176 in axi2mat                                                   |
+| dataflow        |                                                                       | ../../include/common/xf_structs.hpp:1199 in axi2mat                                                   |
+| loop_tripcount  | min=1 max=LOOPBOUND                                                   | ../../include/common/xf_structs.hpp:1273 in mat2matstream                                             |
+| pipeline        |                                                                       | ../../include/common/xf_structs.hpp:1274 in mat2matstream                                             |
+| loop_tripcount  | min=1 max=ROWS                                                        | ../../include/common/xf_structs.hpp:1303 in matstream2axistream                                       |
+| loop_tripcount  | min=1 max=COLS_BOUND_PER_NPC                                          | ../../include/common/xf_structs.hpp:1308 in matstream2axistream                                       |
+| pipeline        |                                                                       | ../../include/common/xf_structs.hpp:1309 in matstream2axistream                                       |
+| dataflow        |                                                                       | ../../include/common/xf_structs.hpp:1351 in mat2axistream                                             |
+| dataflow        |                                                                       | ../../include/common/xf_structs.hpp:1364 in mat2axistream                                             |
+| loop_tripcount  | min=1 max=ADDRBOUND                                                   | ../../include/common/xf_structs.hpp:1381 in axistream2axi                                             |
+| pipeline        |                                                                       | ../../include/common/xf_structs.hpp:1382 in axistream2axi                                             |
+| loop_tripcount  | min=1 max=ADDRBOUND                                                   | ../../include/common/xf_structs.hpp:1396 in axistream2axi                                             |
+| pipeline        |                                                                       | ../../include/common/xf_structs.hpp:1397 in axistream2axi                                             |
+| dataflow        |                                                                       | ../../include/common/xf_structs.hpp:1438 in mat2axi                                                   |
+| dataflow        |                                                                       | ../../include/common/xf_structs.hpp:1469 in mat2axi                                                   |
+| dataflow        |                                                                       | ../../include/common/xf_structs.hpp:1499 in mat2axi                                                   |
+| inline          | OFF                                                                   | ../../include/common/xf_utility.hpp:35 in ptr2xfmat                                                   |
+| pipeline        | II = 1                                                                | ../../include/common/xf_utility.hpp:40 in ptr2xfmat                                                   |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                 | ../../include/common/xf_utility.hpp:41 in ptr2xfmat                                                   |
+| inline          | OFF                                                                   | ../../include/common/xf_utility.hpp:53 in xfmat2ptr                                                   |
+| pipeline        | II = 1                                                                | ../../include/common/xf_utility.hpp:59 in xfmat2ptr                                                   |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                 | ../../include/common/xf_utility.hpp:60 in xfmat2ptr                                                   |
+| inline          | OFF                                                                   | ../../include/common/xf_utility.hpp:81 in xfduplicatemat_ptrmat                                       |
+| pipeline        | II = 1                                                                | ../../include/common/xf_utility.hpp:87 in xfduplicatemat_ptrmat                                       |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                 | ../../include/common/xf_utility.hpp:88 in xfduplicatemat_ptrmat                                       |
+| inline          | OFF                                                                   | ../../include/common/xf_utility.hpp:114 in xfduplicatemat_ptrmat2                                     |
+| pipeline        | II = 1                                                                | ../../include/common/xf_utility.hpp:120 in xfduplicatemat_ptrmat2                                     |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                 | ../../include/common/xf_utility.hpp:121 in xfduplicatemat_ptrmat2                                     |
+| inline          | OFF                                                                   | ../../include/common/xf_utility.hpp:148 in xfduplicatemat_ptr_mat_axi                                 |
+| pipeline        | II = 1                                                                | ../../include/common/xf_utility.hpp:154 in xfduplicatemat_ptr_mat_axi                                 |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                 | ../../include/common/xf_utility.hpp:155 in xfduplicatemat_ptr_mat_axi                                 |
+| inline          | OFF                                                                   | ../../include/common/xf_utility.hpp:176 in xfmat2axi_strm                                             |
+| pipeline        | II = 1                                                                | ../../include/common/xf_utility.hpp:182 in xfmat2axi_strm                                             |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                 | ../../include/common/xf_utility.hpp:183 in xfmat2axi_strm                                             |
+| inline          | OFF                                                                   | ../../include/common/xf_utility.hpp:200 in axi_strm2xfmat                                             |
+| pipeline        | II = 1                                                                | ../../include/common/xf_utility.hpp:206 in axi_strm2xfmat                                             |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                 | ../../include/common/xf_utility.hpp:207 in axi_strm2xfmat                                             |
+| inline          | OFF                                                                   | ../../include/common/xf_utility.hpp:223 in xfduplicatemat_ptr_axi                                     |
+| pipeline        | II = 1                                                                | ../../include/common/xf_utility.hpp:229 in xfduplicatemat_ptr_axi                                     |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                 | ../../include/common/xf_utility.hpp:230 in xfduplicatemat_ptr_axi                                     |
+| inline          | OFF                                                                   | ../../include/common/xf_utility.hpp:252 in xfsetborder                                                |
+| unroll          |                                                                       | ../../include/common/xf_utility.hpp:264 in xfsetborder                                                |
+| unroll          |                                                                       | ../../include/common/xf_utility.hpp:266 in xfsetborder                                                |
+| inline          |                                                                       | ../../include/common/xf_utility.hpp:321 in xfpackpixels                                               |
+| unroll          |                                                                       | ../../include/common/xf_utility.hpp:327 in xfpackpixels                                               |
+| inline          | off                                                                   | ../../include/common/xf_utility.hpp:339 in xfextractpixels                                            |
+| unroll          |                                                                       | ../../include/common/xf_utility.hpp:348 in xfextractpixels                                            |
+| inline          |                                                                       | ../../include/common/xf_utility.hpp:371 in xfextractdata                                              |
+| inline          |                                                                       | ../../include/common/xf_utility.hpp:391 in xfcopydata                                                 |
+| loop_tripcount  | min=6 max=6                                                           | ../../include/common/xf_utility.hpp:399 in xfcopydata                                                 |
+| unroll          |                                                                       | ../../include/common/xf_utility.hpp:400 in xfcopydata                                                 |
+| loop_tripcount  | min=IN_BH max=IN_BH                                                   | ../../include/common/xf_utility.hpp:470 in xfduplicatestream                                          |
+| loop_flatten    | off                                                                   | ../../include/common/xf_utility.hpp:471 in xfduplicatestream                                          |
+| pipeline        |                                                                       | ../../include/common/xf_utility.hpp:475 in xfduplicatestream                                          |
+| loop_tripcount  | min=IN_BW max=IN_BW                                                   | ../../include/common/xf_utility.hpp:476 in xfduplicatestream                                          |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                   | ../../include/common/xf_utility.hpp:501 in array2hlsstrm                                              |
+| pipeline        |                                                                       | ../../include/common/xf_utility.hpp:502 in array2hlsstrm                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                   | ../../include/common/xf_utility.hpp:543 in hlsstrm2xfmat                                              |
+| pipeline        |                                                                       | ../../include/common/xf_utility.hpp:544 in hlsstrm2xfmat                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                   | ../../include/common/xf_utility.hpp:625 in axistrm2hlsstrm                                            |
+| pipeline        |                                                                       | ../../include/common/xf_utility.hpp:626 in axistrm2hlsstrm                                            |
+| dataflow        |                                                                       | ../../include/common/xf_utility.hpp:637 in axistrm2xfmat                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                   | ../../include/common/xf_utility.hpp:693 in xfmat2hlsstrm                                              |
+| pipeline        |                                                                       | ../../include/common/xf_utility.hpp:694 in xfmat2hlsstrm                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                   | ../../include/common/xf_utility.hpp:739 in hlsstrm2array                                              |
+| pipeline        |                                                                       | ../../include/common/xf_utility.hpp:740 in hlsstrm2array                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                   | ../../include/common/xf_utility.hpp:790 in hlsstrm2axistrm                                            |
+| pipeline        |                                                                       | ../../include/common/xf_utility.hpp:791 in hlsstrm2axistrm                                            |
+| dataflow        |                                                                       | ../../include/common/xf_utility.hpp:803 in xfmat2axistrm                                              |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:46 in window<rows, cols, t>                                     |
+| array_partition | variable=val dim=1 complete                                           | ../../include/common/xf_video_mem.hpp:47 in window<rows, cols, t>, val                                |
+| array_partition | variable=val dim=2 complete                                           | ../../include/common/xf_video_mem.hpp:48 in window<rows, cols, t>, val                                |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:112 in shift_pixels_left                                        |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:124 in shift_pixels_left                                        |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:128 in shift_pixels_left                                        |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:156 in shift_pixels_right                                       |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:168 in shift_pixels_right                                       |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:172 in shift_pixels_right                                       |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:200 in shift_pixels_up                                          |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:212 in shift_pixels_up                                          |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:216 in shift_pixels_up                                          |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:244 in shift_pixels_down                                        |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:256 in shift_pixels_down                                        |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:260 in shift_pixels_down                                        |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:287 in insert_pixel                                             |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:320 in insert_row                                               |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:332 in insert_row                                               |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:359 in insert_top_row                                           |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:392 in insert_bottom_row                                        |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:425 in insert_col                                               |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:437 in insert_col                                               |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:464 in insert_left_col                                          |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:497 in insert_right_col                                         |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:530 in getval                                                   |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:542 in operator()                                               |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:579 in shift_left                                               |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:592 in shift_right                                              |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:605 in shift_up                                                 |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:618 in shift_down                                               |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:631 in insert                                                   |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:644 in insert_top                                               |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:657 in insert_bottom                                            |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:670 in insert_left                                              |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:683 in insert_right                                             |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:700 in linebuffer<rows, cols, t, mem_type, reshape_factor>      |
+| dependence      | variable=val inter false                                              | ../../include/common/xf_video_mem.hpp:701 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| dependence      | variable=val intra false                                              | ../../include/common/xf_video_mem.hpp:702 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_1P impl=BRAM                                    | ../../include/common/xf_video_mem.hpp:711 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_1P impl=URAM                                    | ../../include/common/xf_video_mem.hpp:716 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_2P impl=BRAM                                    | ../../include/common/xf_video_mem.hpp:721 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_2P impl=URAM                                    | ../../include/common/xf_video_mem.hpp:726 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_S2P impl=BRAM                                   | ../../include/common/xf_video_mem.hpp:731 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_S2P impl=URAM                                   | ../../include/common/xf_video_mem.hpp:736 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_T2P impl=BRAM                                   | ../../include/common/xf_video_mem.hpp:741 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| bind_storage    | variable=val type=RAM_T2P impl=URAM                                   | ../../include/common/xf_video_mem.hpp:746 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| array_partition | variable=val complete dim=1                                           | ../../include/common/xf_video_mem.hpp:755 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:813 in shift_pixels_down                                        |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:826 in shift_pixels_down                                        |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:856 in shift_pixels_up                                          |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:869 in shift_pixels_up                                          |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:898 in insert_bottom_row                                        |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:931 in insert_top_row                                           |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:964 in get_col                                                  |
+| unroll          |                                                                       | ../../include/common/xf_video_mem.hpp:970 in get_col                                                  |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:981 in getval                                                   |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:992 in operator()                                               |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:1004 in shift_down                                              |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:1016 in shift_up                                                |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:1028 in insert_bottom                                           |
+| inline          |                                                                       | ../../include/common/xf_video_mem.hpp:1040 in insert_top                                              |
+| inline          | off                                                                   | ../../include/imgproc/xf_custom_convolution.hpp:47 in xfapplycustomfilter                             |
+| array_partition | variable=conv_val complete dim=0                                      | ../../include/imgproc/xf_custom_convolution.hpp:53 in xfapplycustomfilter, conv_val                   |
+| array_partition | variable=row_sum complete dim=1                                       | ../../include/imgproc/xf_custom_convolution.hpp:58 in xfapplycustomfilter, row_sum                    |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:67 in xfapplycustomfilter                             |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:74 in xfapplycustomfilter                             |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:79 in xfapplycustomfilter                             |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:91 in xfapplycustomfilter                             |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:96 in xfapplycustomfilter                             |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:103 in xfapplycustomfilter                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:115 in xfapplycustomfilter                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:121 in xfapplycustomfilter                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:135 in xfapplycustomfilter                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:149 in xfapplycustomfilter                            |
+| inline          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:181 in xfcomputecustomfilter                          |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:187 in xfcomputecustomfilter                          |
+| inline          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:230 in convolution_process                            |
+| loop_tripcount  | min=TC max=TC                                                         | ../../include/imgproc/xf_custom_convolution.hpp:238 in convolution_process                            |
+| pipeline        | II=1                                                                  | ../../include/imgproc/xf_custom_convolution.hpp:239 in convolution_process                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:255 in convolution_process                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:264 in convolution_process                            |
+| loop_tripcount  | min=F_COUNT max=F_COUNT                                               | ../../include/imgproc/xf_custom_convolution.hpp:282 in convolution_process                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:283 in convolution_process                            |
+| loop_tripcount  | min=FW max=FW                                                         | ../../include/imgproc/xf_custom_convolution.hpp:301 in convolution_process                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:302 in convolution_process                            |
+| loop_tripcount  | min=F_COUNT max=F_COUNT                                               | ../../include/imgproc/xf_custom_convolution.hpp:318 in convolution_process                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:319 in convolution_process                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:330 in convolution_process                            |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:335 in convolution_process                            |
+| array_partition | variable=index complete dim=1                                         | ../../include/imgproc/xf_custom_convolution.hpp:387 in xfcustomconvolutionkernel, index               |
+| array_partition | variable=buf complete dim=1                                           | ../../include/imgproc/xf_custom_convolution.hpp:393 in xfcustomconvolutionkernel, buf                 |
+| array_partition | variable=lbuf complete dim=0                                          | ../../include/imgproc/xf_custom_convolution.hpp:399 in xfcustomconvolutionkernel, lbuf                |
+| array_partition | variable=tmp_buf complete dim=1                                       | ../../include/imgproc/xf_custom_convolution.hpp:404 in xfcustomconvolutionkernel, tmp_buf             |
+| array_partition | variable=mask_value complete dim=1                                    | ../../include/imgproc/xf_custom_convolution.hpp:409 in xfcustomconvolutionkernel, mask_value          |
+| array_partition | variable=col_border_mask complete dim=1                               | ../../include/imgproc/xf_custom_convolution.hpp:414 in xfcustomconvolutionkernel, col_border_mask     |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:431 in xfcustomconvolutionkernel                      |
+| loop_tripcount  | min=COLS_COUNT max=COLS_COUNT                                         | ../../include/imgproc/xf_custom_convolution.hpp:436 in xfcustomconvolutionkernel                      |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:437 in xfcustomconvolutionkernel                      |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:448 in xfcustomconvolutionkernel                      |
+| loop_tripcount  | min=COLS_COUNT max=COLS_COUNT                                         | ../../include/imgproc/xf_custom_convolution.hpp:453 in xfcustomconvolutionkernel                      |
+| pipeline        |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:454 in xfcustomconvolutionkernel                      |
+| loop_tripcount  | min=ROWS max=ROWS                                                     | ../../include/imgproc/xf_custom_convolution.hpp:466 in xfcustomconvolutionkernel                      |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:475 in xfcustomconvolutionkernel                      |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:486 in xfcustomconvolutionkernel                      |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:491 in xfcustomconvolutionkernel                      |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:510 in xfcustomconvolutionkernel                      |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:515 in xfcustomconvolutionkernel                      |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:526 in xfcustomconvolutionkernel                      |
+| loop_tripcount  | min=FW max=FW                                                         | ../../include/imgproc/xf_custom_convolution.hpp:539 in xfcustomconvolutionkernel                      |
+| unroll          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:540 in xfcustomconvolutionkernel                      |
+| loop_tripcount  | min=COL_FACTOR_COUNT max=COL_FACTOR_COUNT                             | ../../include/imgproc/xf_custom_convolution.hpp:553 in xfcustomconvolutionkernel                      |
+| inline          | off                                                                   | ../../include/imgproc/xf_custom_convolution.hpp:580 in xfapplyfilter2d                                |
+| inline          |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:634 in borderinterpolate                              |
+| inline          | off                                                                   | ../../include/imgproc/xf_custom_convolution.hpp:669 in xffilter2dkernel                               |
+| array_partition | variable=col_buf complete dim=0                                       | ../../include/imgproc/xf_custom_convolution.hpp:688 in xffilter2dkernel, col_buf                      |
+| array_partition | variable=_filter_kernel complete dim=0                                | ../../include/imgproc/xf_custom_convolution.hpp:689 in xffilter2dkernel, _filter_kernel               |
+| array_partition | variable=src_kernel_win complete dim=0                                | ../../include/imgproc/xf_custom_convolution.hpp:690 in xffilter2dkernel, src_kernel_win               |
+| array_partition | variable=k_buf complete dim=1                                         | ../../include/imgproc/xf_custom_convolution.hpp:691 in xffilter2dkernel, k_buf                        |
+| array_partition | variable=right_border_buf complete dim=0                              | ../../include/imgproc/xf_custom_convolution.hpp:692 in xffilter2dkernel, right_border_buf             |
+| dependence      | array inter false                                                     | ../../include/imgproc/xf_custom_convolution.hpp:713 in xffilter2dkernel                               |
+| loop_flatten    | OFF                                                                   | ../../include/imgproc/xf_custom_convolution.hpp:714 in xffilter2dkernel                               |
+| pipeline        |                                                                       | ../../include/imgproc/xf_custom_convolution.hpp:715 in xffilter2dkernel                               |
+| inline          | OFF                                                                   | ../../include/imgproc/xf_custom_convolution.hpp:821 in filter2d                                       |
+| array_partition | variable=lfilter complete dim=0                                       | ../../include/imgproc/xf_custom_convolution.hpp:832 in filter2d, lfilter                              |
+| interface       | m_axi port=img_in offset=slave bundle=gmem0 depth=__XF_DEPTH_IN       | xf_custom_convolution_accel.cpp:97 in filter2d_accel, img_in                                          |
+| interface       | m_axi port=filter offset=slave bundle=gmem1 depth=__XF_DEPTH_FILTER   | xf_custom_convolution_accel.cpp:99 in filter2d_accel, filter                                          |
+| interface       | m_axi port=conv_out offset=slave bundle=gmem2 depth=__XF_DEPTH_OUT    | xf_custom_convolution_accel.cpp:100 in filter2d_accel, conv_out                                       |
+| interface       | m_axi port=maxpool_out offset=slave bundle=gmem3 depth=__XF_DEPTH_OUT | xf_custom_convolution_accel.cpp:101 in filter2d_accel, maxpool_out                                    |
+| interface       | s_axilite port=shift bundle=control                                   | xf_custom_convolution_accel.cpp:103 in filter2d_accel, shift                                          |
+| interface       | s_axilite port=rows bundle=control                                    | xf_custom_convolution_accel.cpp:104 in filter2d_accel, rows                                           |
+| interface       | s_axilite port=cols bundle=control                                    | xf_custom_convolution_accel.cpp:105 in filter2d_accel, cols                                           |
+| interface       | s_axilite port=return bundle=control                                  | xf_custom_convolution_accel.cpp:106 in filter2d_accel, return                                         |
+| dataflow        |                                                                       | xf_custom_convolution_accel.cpp:112 in filter2d_accel                                                 |
++-----------------+-----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+
+

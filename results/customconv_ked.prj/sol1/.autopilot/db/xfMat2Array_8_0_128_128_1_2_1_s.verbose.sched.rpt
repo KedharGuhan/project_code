@@ -1,0 +1,124 @@
+
+
+================================================================
+== Vitis HLS Report for 'xfMat2Array_8_0_128_128_1_2_1_s'
+================================================================
+* Date:           Sat May  4 12:09:34 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        customconv_ked.prj
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.30 ns|  2.835 ns|     0.89 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max   | min |  max  |   Type  |
+    +---------+---------+-----------+----------+-----+-------+---------+
+    |       22|    32783|  72.600 ns|  0.108 ms|   22|  32783|       no|
+    +---------+---------+-----------+----------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.40>
+ST_1 : Operation 3 [1/1] (1.20ns)   --->   "%p_read_1 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read1"   --->   Operation 3 'read' 'p_read_1' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 4 [1/1] (1.20ns)   --->   "%p_read_2 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read"   --->   Operation 4 'read' 'p_read_2' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 5 [1/1] (1.20ns)   --->   "%dstPtr_read = read i64 @_ssdm_op_Read.ap_fifo.i64P0A, i64 %dstPtr"   --->   Operation 5 'read' 'dstPtr_read' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.36> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 5> <FIFO>
+ST_1 : Operation 6 [1/1] (1.20ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i64P0A, i64 %conv_out_c, i64 %dstPtr_read"   --->   Operation 6 'write' 'write_ln0' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%trunc_ln1557 = trunc i32 %p_read_2" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1557->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_utility.hpp:826]   --->   Operation 7 'trunc' 'trunc_ln1557' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (1.20ns)   --->   "%call_ln1557 = call void @Mat2Axi, i8 %imgOutput_data, i8 %gmem2, i64 %dstPtr_read, i16 %trunc_ln1557, i32 %p_read_1" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1557->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_utility.hpp:826]   --->   Operation 8 'call' 'call_ln1557' <Predicate = true> <Delay = 1.20> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %dstPtr, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv_out_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %imgOutput_data, void @empty_11, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem2, void @empty_3, i32 0, i32 0, void @empty_8, i32 0, i32 16384, void @empty, void @empty_1, void @empty_8, i32 16, i32 16, i32 16, i32 16, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/2] (0.00ns)   --->   "%call_ln1557 = call void @Mat2Axi, i8 %imgOutput_data, i8 %gmem2, i64 %dstPtr_read, i16 %trunc_ln1557, i32 %p_read_1" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1557->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_utility.hpp:826]   --->   Operation 13 'call' 'call_ln1557' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%ret_ln831 = ret" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_utility.hpp:831]   --->   Operation 14 'ret' 'ret_ln831' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.300ns, clock uncertainty: 0.891ns.
+
+ <State 1>: 2.409ns
+The critical path consists of the following:
+	fifo read operation ('dstPtr_read') on port 'dstPtr' [10]  (1.204 ns)
+	fifo write operation ('write_ln0') on port 'conv_out_c' [12]  (1.204 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

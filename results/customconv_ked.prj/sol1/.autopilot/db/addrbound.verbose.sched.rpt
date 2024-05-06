@@ -1,0 +1,146 @@
+
+
+================================================================
+== Vitis HLS Report for 'addrbound'
+================================================================
+* Date:           Sat May  4 12:09:33 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        customconv_ked.prj
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.30 ns|  2.545 ns|     0.89 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        4|        4|  13.200 ns|  13.200 ns|    4|    4|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.20>
+ST_1 : Operation 6 [1/1] (1.20ns)   --->   "%cols_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %cols" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:942->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421]   --->   Operation 6 'read' 'cols_read' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 7 [1/1] (1.20ns)   --->   "%rows_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %rows" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:942->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421]   --->   Operation 7 'read' 'rows_read' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+
+State 2 <SV = 1> <Delay = 2.54>
+ST_2 : Operation 8 [3/3] (2.54ns)   --->   "%mul_rows_cols = mul i15 %cols_read, i15 %rows_read" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:949->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421]   --->   Operation 8 'mul' 'mul_rows_cols' <Predicate = true> <Delay = 2.54> <CoreInst = "Mul_DSP">   --->   Core 5 'Mul_DSP' <Latency = 2> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.54>
+ST_3 : Operation 9 [2/3] (2.54ns)   --->   "%mul_rows_cols = mul i15 %cols_read, i15 %rows_read" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:949->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421]   --->   Operation 9 'mul' 'mul_rows_cols' <Predicate = true> <Delay = 2.54> <CoreInst = "Mul_DSP">   --->   Core 5 'Mul_DSP' <Latency = 2> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.54>
+ST_4 : Operation 10 [1/3] (2.54ns)   --->   "%mul_rows_cols = mul i15 %cols_read, i15 %rows_read" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:949->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421]   --->   Operation 10 'mul' 'mul_rows_cols' <Predicate = true> <Delay = 2.54> <CoreInst = "Mul_DSP">   --->   Core 5 'Mul_DSP' <Latency = 2> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specfucore_ln949 = specfucore void @_ssdm_op_SpecFUCore, i15 %mul_rows_cols, i64 12, i64 3, i64 2" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:949->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421]   --->   Operation 11 'specfucore' 'specfucore_ln949' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 1.20>
+ST_5 : Operation 12 [1/1] (0.00ns)   --->   "%rbegin_i_i = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_21" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:946->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421]   --->   Operation 12 'specregionbegin' 'rbegin_i_i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 13 [1/1] (0.00ns)   --->   "%rend_i_i = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_21, i32 %rbegin_i_i" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:952->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421]   --->   Operation 13 'specregionend' 'rend_i_i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 14 [1/1] (1.20ns)   --->   "%write_ln949 = write void @_ssdm_op_Write.ap_auto.volatile.i15P0A, i15 %p_channel, i15 %mul_rows_cols" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:949->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421]   --->   Operation 14 'write' 'write_ln949' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_5 : Operation 15 [1/1] (0.00ns)   --->   "%ret_ln1421 = ret" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421]   --->   Operation 15 'ret' 'ret_ln1421' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.300ns, clock uncertainty: 0.891ns.
+
+ <State 1>: 1.204ns
+The critical path consists of the following:
+	wire read operation ('cols', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:942->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421) on port 'cols' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:942->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421) [4]  (1.204 ns)
+
+ <State 2>: 2.545ns
+The critical path consists of the following:
+	'mul' operation 15 bit ('mul_rows_cols', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:949->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421) [7]  (2.545 ns)
+
+ <State 3>: 2.545ns
+The critical path consists of the following:
+	'mul' operation 15 bit ('mul_rows_cols', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:949->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421) [7]  (2.545 ns)
+
+ <State 4>: 2.545ns
+The critical path consists of the following:
+	'mul' operation 15 bit ('mul_rows_cols', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:949->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421) [7]  (2.545 ns)
+
+ <State 5>: 1.204ns
+The critical path consists of the following:
+	wire write operation ('write_ln949', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:949->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421) on port 'p_channel' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:949->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1421) [10]  (1.204 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,4 @@
+3 warnings and 9 errors generated.
+Error while processing /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp.
+clang-tidy applied 83 of 83 suggested fixes.
+Suppressed 3 warnings (3 with check filters).

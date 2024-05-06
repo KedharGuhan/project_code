@@ -1,0 +1,153 @@
+
+
+================================================================
+== Vitis HLS Report for 'Axi2AxiStream_Pipeline_VITIS_LOOP_1021_1'
+================================================================
+* Date:           Sat May  4 12:09:31 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        customconv_ked.prj
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.30 ns|  4.133 ns|     0.89 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        4|      131|  16.530 ns|  0.541 us|    4|  131|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_1021_1  |        2|      129|         3|          1|          1|  1 ~ 128|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.13>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%c = alloca i32 1" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1015->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 6 'alloca' 'c' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specfucore_ln0 = specfucore void @_ssdm_op_SpecFUCore, i15 %mul_rows_cols, i64 12, i64 3, i64 2"   --->   Operation 7 'specfucore' 'specfucore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem0, void @empty_3, i32 0, i32 0, void @empty_8, i32 0, i32 16384, void @empty_2, void @empty_1, void @empty_8, i32 16, i32 16, i32 16, i32 16, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %ldata, void @empty_11, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%din_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %din" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:943->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1012->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 10 'read' 'din_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mul_rows_cols_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %mul_rows_cols" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:943->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1012->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 11 'read' 'mul_rows_cols_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.29ns)   --->   "%store_ln1015 = store i15 0, i15 %c" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1015->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 12 'store' 'store_ln1015' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%c_1 = load i15 %c" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 14 'load' 'c_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.53ns)   --->   "%icmp_ln1021 = icmp_eq  i15 %c_1, i15 %mul_rows_cols_read" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 15 'icmp' 'icmp_ln1021' <Predicate = true> <Delay = 1.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (1.53ns)   --->   "%c_2 = add i15 %c_1, i15 1" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 16 'add' 'c_2' <Predicate = true> <Delay = 1.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln1021 = br i1 %icmp_ln1021, void %for.inc.split.i, void %Axi2AxiStream.exit.exitStub" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 17 'br' 'br_ln1021' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i8 %gmem0, i64 %din_read" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 18 'getelementptr' 'gmem0_addr' <Predicate = (!icmp_ln1021)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.29ns)   --->   "%store_ln1015 = store i15 %c_2, i15 %c" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1015->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 19 'store' 'store_ln1015' <Predicate = (!icmp_ln1021)> <Delay = 1.29>
+
+State 2 <SV = 1> <Delay = 2.40>
+ST_2 : Operation 20 [1/1] (2.40ns)   --->   "%gmem0_addr_read = read i8 @_ssdm_op_Read.m_axi.p1i8, i8 %gmem0_addr" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1026->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 20 'read' 'gmem0_addr_read' <Predicate = true> <Delay = 2.40> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 26 'ret' 'ret_ln0' <Predicate = (icmp_ln1021)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.20>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specpipeline_ln1024 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_8" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1024->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 21 'specpipeline' 'specpipeline_ln1024' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%speclooptripcount_ln1023 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 128, i64 64" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1023->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 22 'speclooptripcount' 'speclooptripcount_ln1023' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specloopname_ln1021 = specloopname void @_ssdm_op_SpecLoopName, void @empty_22" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 23 'specloopname' 'specloopname_ln1021' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (1.20ns)   --->   "%write_ln1026 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %ldata, i8 %gmem0_addr_read" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1026->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 24 'write' 'write_ln1026' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln1021 = br void %for.inc.i" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155]   --->   Operation 25 'br' 'br_ln1021' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.300ns, clock uncertainty: 0.891ns.
+
+ <State 1>: 4.133ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln1015', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1015->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155) of constant 0 on local variable 'c', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1015->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155 [11]  (1.298 ns)
+	'load' operation 15 bit ('c', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155) on local variable 'c', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1015->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155 [14]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln1021', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155) [15]  (1.536 ns)
+	'store' operation 0 bit ('store_ln1015', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1015->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155) of variable 'c', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1021->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155 on local variable 'c', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1015->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155 [25]  (1.298 ns)
+
+ <State 2>: 2.409ns
+The critical path consists of the following:
+	bus read operation ('gmem0_addr_read', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1026->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155) on port 'gmem0' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1026->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155) [23]  (2.409 ns)
+
+ <State 3>: 1.204ns
+The critical path consists of the following:
+	fifo write operation ('write_ln1026', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1026->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155) on port 'ldata' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1026->/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1155) [24]  (1.204 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

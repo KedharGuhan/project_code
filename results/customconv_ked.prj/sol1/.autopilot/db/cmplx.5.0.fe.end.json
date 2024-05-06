@@ -1,0 +1,359 @@
+{
+    "1": {
+        "name": "xFApplyFilter2D<0, 0, 3, 3, 1>",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/imgproc\/xf_custom_convolution.hpp",
+        "fileloc": "583",
+        "instructions": "80",
+        "total_instructions": "80",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "MatStream2AxiStream<2>_Pipeline_MMIterOutRow_MMIterOutCol",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1289",
+        "instructions": "71",
+        "total_instructions": "71",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "9"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "Axi2AxiStream",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1155",
+        "instructions": "21",
+        "total_instructions": "42",
+        "calls": "24",
+        "basicblocks": "1"
+    },
+    "4": {
+        "name": "AxiStream2Axi",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1373",
+        "instructions": "12",
+        "total_instructions": "32",
+        "calls": "21",
+        "basicblocks": "1"
+    },
+    "5": {
+        "name": "Mat2AxiStream",
+        "file": "xf_structs.hpp",
+        "fileloc": "1345",
+        "instructions": "16",
+        "total_instructions": "120",
+        "calls": "20 11 23",
+        "basicblocks": "1"
+    },
+    "6": {
+        "name": "entry_proc7",
+        "file": "xf_custom_convolution_accel.cpp",
+        "fileloc": "0",
+        "instructions": "7",
+        "total_instructions": "7",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "7": {
+        "name": "AxiStream2Mat",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1115",
+        "instructions": "16",
+        "total_instructions": "158",
+        "calls": "27 19 16",
+        "basicblocks": "1"
+    },
+    "8": {
+        "name": "filter2D<0, 3, 3, 0, 0, 128, 128, 1, 2, 2>",
+        "file": "xf_custom_convolution.hpp",
+        "fileloc": "816",
+        "instructions": "36",
+        "total_instructions": "403",
+        "calls": "22 29",
+        "basicblocks": "1",
+        "loads": {
+            "L": "9"
+        }
+    },
+    "9": {
+        "name": "pool_gpt",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/examples\/customconv\/xf_custom_convolution_accel.cpp",
+        "fileloc": "3",
+        "instructions": "11",
+        "total_instructions": "65",
+        "calls": "17",
+        "basicblocks": "1"
+    },
+    "10": {
+        "name": "entry_proc6",
+        "file": "xf_structs.hpp",
+        "fileloc": "0",
+        "instructions": "4",
+        "total_instructions": "4",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "11": {
+        "name": "last_blk_pxl_width.1",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "933",
+        "instructions": "2",
+        "total_instructions": "2",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "12": {
+        "name": "Block_entry1_proc",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/examples\/customconv\/xf_custom_convolution_accel.cpp",
+        "fileloc": "109",
+        "instructions": "7",
+        "total_instructions": "7",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "13": {
+        "name": "Mat2Axi_Block_entry24_proc",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1421",
+        "instructions": "2",
+        "total_instructions": "2",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "14": {
+        "name": "Mat2Axi",
+        "file": "xf_structs.hpp",
+        "fileloc": "1405",
+        "instructions": "21",
+        "total_instructions": "187",
+        "calls": "10 26 13 5 4",
+        "basicblocks": "1"
+    },
+    "15": {
+        "name": "AxiStream2MatStream<2>_Pipeline_MMIterInLoopRow",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1048",
+        "instructions": "116",
+        "total_instructions": "116",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "9"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "16": {
+        "name": "AxiStream2MatStream<2>",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1052",
+        "instructions": "15",
+        "total_instructions": "131",
+        "calls": "15",
+        "basicblocks": "1"
+    },
+    "17": {
+        "name": "pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/examples\/customconv\/xf_custom_convolution_accel.cpp",
+        "fileloc": "9",
+        "instructions": "54",
+        "total_instructions": "54",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "18": {
+        "name": "Array2xfMat<8, 0, 128, 128, 1, 2>",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_utility.hpp",
+        "fileloc": "836",
+        "instructions": "11",
+        "total_instructions": "229",
+        "calls": "28",
+        "basicblocks": "1"
+    },
+    "19": {
+        "name": "last_blk_pxl_width",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "933",
+        "instructions": "2",
+        "total_instructions": "2",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "20": {
+        "name": "entry_proc",
+        "file": "xf_structs.hpp",
+        "fileloc": "0",
+        "instructions": "7",
+        "total_instructions": "7",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "21": {
+        "name": "AxiStream2Axi_Pipeline_MMIterOutLoop2",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1373",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "22": {
+        "name": "filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/imgproc\/xf_custom_convolution.hpp",
+        "fileloc": "834",
+        "instructions": "80",
+        "total_instructions": "80",
+        "calls": "",
+        "basicblocks": "17",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "15"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "23": {
+        "name": "MatStream2AxiStream<2>",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1287",
+        "instructions": "24",
+        "total_instructions": "95",
+        "calls": "2",
+        "basicblocks": "3",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "24": {
+        "name": "Axi2AxiStream_Pipeline_VITIS_LOOP_1021_1",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1155",
+        "instructions": "21",
+        "total_instructions": "21",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "25": {
+        "name": "xfMat2Array<8, 0, 128, 128, 1, 2, 1>",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_utility.hpp",
+        "fileloc": "826",
+        "instructions": "11",
+        "total_instructions": "198",
+        "calls": "14",
+        "basicblocks": "1"
+    },
+    "0": {
+        "name": "Filter2d_accel",
+        "file": "xf_custom_convolution_accel.cpp",
+        "fileloc": "89",
+        "instructions": "67",
+        "total_instructions": "976",
+        "calls": "6 12 18 8 25 9",
+        "basicblocks": "1"
+    },
+    "26": {
+        "name": "addrbound",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "1421",
+        "instructions": "8",
+        "total_instructions": "8",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "27": {
+        "name": "entry_proc5",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/common\/xf_structs.hpp",
+        "fileloc": "0",
+        "instructions": "9",
+        "total_instructions": "9",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "28": {
+        "name": "Axi2Mat",
+        "file": "xf_structs.hpp",
+        "fileloc": "1135",
+        "instructions": "18",
+        "total_instructions": "218",
+        "calls": "3 7",
+        "basicblocks": "1"
+    },
+    "29": {
+        "name": "xFFilter2Dkernel<0, 0, 128, 128, 0, 0, 1, 2, 2, 1, 1, 128, 3, 3, 1>",
+        "file": "xf_custom_convolution.hpp",
+        "fileloc": "659",
+        "instructions": "78",
+        "total_instructions": "287",
+        "calls": "30",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "30": {
+        "name": "xFFilter2Dkernel_Pipeline_COL_LOOP",
+        "file": "\/home\/kedhar\/Vitis_Libraries\/vision\/L1\/examples\/customconv\/..\/..\/..\/L1\/include\/imgproc\/xf_custom_convolution.hpp",
+        "fileloc": "673",
+        "instructions": "129",
+        "total_instructions": "209",
+        "calls": "1",
+        "basicblocks": "16",
+        "loads": {
+            "L": "13"
+        },
+        "stores": {
+            "L": "27"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

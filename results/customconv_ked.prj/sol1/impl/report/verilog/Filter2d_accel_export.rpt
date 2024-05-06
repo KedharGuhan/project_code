@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2023.2
+Project:             customconv_ked.prj
+Solution:            sol1
+Device target:       xc7z020-clg484-2
+Report date:         Sat May 04 12:25:48 PDT 2024
+
+#=== Post-Implementation Resource usage ===
+SLICE:         2836
+LUT:           6193
+FF:            9123
+DSP:             15
+BRAM:             8
+URAM:             0
+LATCH:            0
+SRL:            599
+CLB:              0
+
+#=== Final timing ===
+CP required:                     3.300
+CP achieved post-synthesis:      5.694
+CP achieved post-implementation: 4.739
+Timing not met

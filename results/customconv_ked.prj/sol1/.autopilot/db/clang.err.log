@@ -1,0 +1,8 @@
+In file included from /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:1:
+In file included from ././xf_custom_convolution_accel_config.h:1:
+In file included from /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/config/xf_config_params.h:7:
+In file included from /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_utility.hpp:23:
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_video_mem.hpp:759:47: warning: 'factor' in '#pragma HLS array_reshape' is ignored [-Wextra-tokens]
+#pragma HLS ARRAY_RESHAPE variable=val factor=RESHAPE_FACTOR dim=1
+                                              ^
+1 warning generated.

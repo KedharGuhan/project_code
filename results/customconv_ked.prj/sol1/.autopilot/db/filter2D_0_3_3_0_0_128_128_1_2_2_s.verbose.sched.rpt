@@ -1,0 +1,238 @@
+
+
+================================================================
+== Vitis HLS Report for 'filter2D_0_3_3_0_0_128_128_1_2_2_s'
+================================================================
+* Date:           Sat May  4 12:09:32 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        customconv_ked.prj
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.30 ns|  3.635 ns|     0.89 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+------------+----------+------------+-----+------------+---------+
+    |   Latency (cycles)   |   Latency (absolute)  |     Interval     | Pipeline|
+    |   min   |     max    |    min   |     max    | min |     max    |   Type  |
+    +---------+------------+----------+------------+-----+------------+---------+
+    |      203|  4297523363|  0.738 us|  15.619 sec|  203|  4297523363|       no|
+    +---------+------------+----------+------------+-----+------------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.40>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%filter_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %filter"   --->   Operation 13 'read' 'filter_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_loc28 = alloca i64 1"   --->   Operation 14 'alloca' 'p_loc28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_loc27 = alloca i64 1"   --->   Operation 15 'alloca' 'p_loc27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_loc26 = alloca i64 1"   --->   Operation 16 'alloca' 'p_loc26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_loc25 = alloca i64 1"   --->   Operation 17 'alloca' 'p_loc25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_loc24 = alloca i64 1"   --->   Operation 18 'alloca' 'p_loc24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_loc23 = alloca i64 1"   --->   Operation 19 'alloca' 'p_loc23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_loc22 = alloca i64 1"   --->   Operation 20 'alloca' 'p_loc22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_loc21 = alloca i64 1"   --->   Operation 21 'alloca' 'p_loc21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p_loc = alloca i64 1"   --->   Operation 22 'alloca' 'p_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %filter_read, i32 1, i32 63" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 23 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%sext_ln834 = sext i63 %trunc_ln" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 24 'sext' 'sext_ln834' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%gmem1_addr = getelementptr i16 %gmem1, i64 %sext_ln834" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 25 'getelementptr' 'gmem1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [8/8] (2.40ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 9" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 26 'readreq' 'empty' <Predicate = true> <Delay = 2.40> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 2 <SV = 1> <Delay = 2.40>
+ST_2 : Operation 27 [7/8] (2.40ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 9" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 27 'readreq' 'empty' <Predicate = true> <Delay = 2.40> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 2.40>
+ST_3 : Operation 28 [6/8] (2.40ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 9" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 28 'readreq' 'empty' <Predicate = true> <Delay = 2.40> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 2.40>
+ST_4 : Operation 29 [5/8] (2.40ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 9" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 29 'readreq' 'empty' <Predicate = true> <Delay = 2.40> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 2.40>
+ST_5 : Operation 30 [4/8] (2.40ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 9" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 30 'readreq' 'empty' <Predicate = true> <Delay = 2.40> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 2.40>
+ST_6 : Operation 31 [3/8] (2.40ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 9" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 31 'readreq' 'empty' <Predicate = true> <Delay = 2.40> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 2.40>
+ST_7 : Operation 32 [2/8] (2.40ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 9" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 32 'readreq' 'empty' <Predicate = true> <Delay = 2.40> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 2.40>
+ST_8 : Operation 33 [1/8] (2.40ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 9" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 33 'readreq' 'empty' <Predicate = true> <Delay = 2.40> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 34 [2/2] (0.00ns)   --->   "%call_ln834 = call void @filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2, i16 %gmem1, i63 %trunc_ln, i16 %p_loc, i16 %p_loc21, i16 %p_loc22, i16 %p_loc23, i16 %p_loc24, i16 %p_loc25, i16 %p_loc26, i16 %p_loc27, i16 %p_loc28" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 34 'call' 'call_ln834' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 2.29>
+ST_10 : Operation 35 [1/1] (1.20ns)   --->   "%p_src_mat_cols_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %p_src_mat_cols"   --->   Operation 35 'read' 'p_src_mat_cols_read' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_10 : Operation 36 [1/1] (1.20ns)   --->   "%p_src_mat_rows_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %p_src_mat_rows"   --->   Operation 36 'read' 'p_src_mat_rows_read' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_10 : Operation 37 [1/2] (2.29ns)   --->   "%call_ln834 = call void @filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2, i16 %gmem1, i63 %trunc_ln, i16 %p_loc, i16 %p_loc21, i16 %p_loc22, i16 %p_loc23, i16 %p_loc24, i16 %p_loc25, i16 %p_loc26, i16 %p_loc27, i16 %p_loc28" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834]   --->   Operation 37 'call' 'call_ln834' <Predicate = true> <Delay = 2.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 38 [1/1] (0.00ns)   --->   "%img_width = trunc i32 %p_src_mat_cols_read" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:826]   --->   Operation 38 'trunc' 'img_width' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 39 [1/1] (0.00ns)   --->   "%img_height = trunc i32 %p_src_mat_rows_read" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:827]   --->   Operation 39 'trunc' 'img_height' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 1.54>
+ST_11 : Operation 40 [1/1] (0.00ns)   --->   "%p_shift_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_shift"   --->   Operation 40 'read' 'p_shift_read' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 41 [1/1] (0.00ns)   --->   "%p_loc_load = load i16 %p_loc"   --->   Operation 41 'load' 'p_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 42 [1/1] (0.00ns)   --->   "%p_loc21_load = load i16 %p_loc21"   --->   Operation 42 'load' 'p_loc21_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 43 [1/1] (0.00ns)   --->   "%p_loc22_load = load i16 %p_loc22"   --->   Operation 43 'load' 'p_loc22_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 44 [1/1] (0.00ns)   --->   "%p_loc23_load = load i16 %p_loc23"   --->   Operation 44 'load' 'p_loc23_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 45 [1/1] (0.00ns)   --->   "%p_loc24_load = load i16 %p_loc24"   --->   Operation 45 'load' 'p_loc24_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 46 [1/1] (0.00ns)   --->   "%p_loc25_load = load i16 %p_loc25"   --->   Operation 46 'load' 'p_loc25_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 47 [1/1] (0.00ns)   --->   "%p_loc26_load = load i16 %p_loc26"   --->   Operation 47 'load' 'p_loc26_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 48 [1/1] (0.00ns)   --->   "%p_loc27_load = load i16 %p_loc27"   --->   Operation 48 'load' 'p_loc27_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 49 [1/1] (0.00ns)   --->   "%p_loc28_load = load i16 %p_loc28"   --->   Operation 49 'load' 'p_loc28_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 50 [2/2] (1.54ns)   --->   "%call_ln852 = call void @xFFilter2Dkernel<0, 0, 128, 128, 0, 0, 1, 2, 2, 1, 1, 128, 3, 3, 1>, i8 %imgInput_data, i8 %imgOutput_data, i16 %p_loc24_load, i16 %p_loc25_load, i16 %p_loc23_load, i16 %p_loc27_load, i16 %p_loc28_load, i16 %p_loc26_load, i16 %p_loc21_load, i16 %p_loc22_load, i16 %p_loc_load, i8 %p_shift_read, i16 %img_height, i16 %img_width" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:852]   --->   Operation 50 'call' 'call_ln852' <Predicate = true> <Delay = 1.54> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %p_src_mat_cols, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %p_src_mat_rows, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %imgOutput_data, void @empty_11, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %imgInput_data, void @empty_11, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gmem1, void @empty_3, i32 0, i32 0, void @empty_8, i32 0, i32 9, void @empty_0, void @empty_1, void @empty_8, i32 16, i32 16, i32 16, i32 16, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 56 [1/2] (0.00ns)   --->   "%call_ln852 = call void @xFFilter2Dkernel<0, 0, 128, 128, 0, 0, 1, 2, 2, 1, 1, 128, 3, 3, 1>, i8 %imgInput_data, i8 %imgOutput_data, i16 %p_loc24_load, i16 %p_loc25_load, i16 %p_loc23_load, i16 %p_loc27_load, i16 %p_loc28_load, i16 %p_loc26_load, i16 %p_loc21_load, i16 %p_loc22_load, i16 %p_loc_load, i8 %p_shift_read, i16 %img_height, i16 %img_width" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:852]   --->   Operation 56 'call' 'call_ln852' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 57 [1/1] (0.00ns)   --->   "%ret_ln857 = ret" [/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:857]   --->   Operation 57 'ret' 'ret_ln857' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.300ns, clock uncertainty: 0.891ns.
+
+ <State 1>: 2.409ns
+The critical path consists of the following:
+	wire read operation ('filter_read') on port 'filter' [9]  (0.000 ns)
+	'getelementptr' operation 16 bit ('gmem1_addr', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) [28]  (0.000 ns)
+	bus request operation ('empty', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) on port 'gmem1' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) [29]  (2.409 ns)
+
+ <State 2>: 2.409ns
+The critical path consists of the following:
+	bus request operation ('empty', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) on port 'gmem1' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) [29]  (2.409 ns)
+
+ <State 3>: 2.409ns
+The critical path consists of the following:
+	bus request operation ('empty', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) on port 'gmem1' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) [29]  (2.409 ns)
+
+ <State 4>: 2.409ns
+The critical path consists of the following:
+	bus request operation ('empty', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) on port 'gmem1' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) [29]  (2.409 ns)
+
+ <State 5>: 2.409ns
+The critical path consists of the following:
+	bus request operation ('empty', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) on port 'gmem1' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) [29]  (2.409 ns)
+
+ <State 6>: 2.409ns
+The critical path consists of the following:
+	bus request operation ('empty', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) on port 'gmem1' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) [29]  (2.409 ns)
+
+ <State 7>: 2.409ns
+The critical path consists of the following:
+	bus request operation ('empty', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) on port 'gmem1' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) [29]  (2.409 ns)
+
+ <State 8>: 2.409ns
+The critical path consists of the following:
+	bus request operation ('empty', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) on port 'gmem1' (/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) [29]  (2.409 ns)
+
+ <State 9>: 0.000ns
+The critical path consists of the following:
+
+ <State 10>: 2.295ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln834', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:834) to 'filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2' [30]  (2.295 ns)
+
+ <State 11>: 1.545ns
+The critical path consists of the following:
+	wire read operation ('p_shift_read') on port 'p_shift' [8]  (0.000 ns)
+	'call' operation 0 bit ('call_ln852', /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:852) to 'xFFilter2Dkernel<0, 0, 128, 128, 0, 0, 1, 2, 2, 1, 1, 128, 3, 3, 1>' [42]  (1.545 ns)
+
+ <State 12>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

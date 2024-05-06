@@ -1,0 +1,601 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2023.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>3.300</TargetClockPeriod>
+    <AchievedClockPeriod>5.694</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>5.694</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>5.694</CP_SYNTH>
+    <CP_TARGET>3.300</CP_TARGET>
+    <SLACK_FINAL>-2.394</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>-2.394</SLACK_SYNTH>
+    <TIMING_MET>FALSE</TIMING_MET>
+    <TNS_FINAL>-1580.240</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>-1580.240</TNS_SYNTH>
+    <WNS_FINAL>-2.394</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>-2.394</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>8</BRAM>
+      <CLB>0</CLB>
+      <DSP>15</DSP>
+      <FF>9107</FF>
+      <LATCH>0</LATCH>
+      <LUT>6798</LUT>
+      <SRL>1120</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>280</BRAM>
+      <CLB>0</CLB>
+      <DSP>220</DSP>
+      <FF>106400</FF>
+      <LUT>53200</LUT>
+      <URAM>0</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="Filter2d_accel" DISPNAME="inst" RTLNAME="Filter2d_accel">
+      <SubModules count="22">Array2xfMat_8_0_128_128_1_2_U0 Block_entry1_proc_U0 control_r_s_axi_U control_s_axi_U conv_out_c11_U conv_out_c_U filter2D_0_3_3_0_0_128_128_1_2_2_U0 gmem0_m_axi_U gmem1_m_axi_U gmem2_m_axi_U gmem3_m_axi_U imgInput_cols_c13_channel_U imgInput_cols_c_U imgInput_data_U imgInput_rows_c12_channel_U imgInput_rows_c_U imgOutput_cols_channel_U imgOutput_data_U imgOutput_rows_channel_U maxpool_out_c_U pool_gpt_U0 xfMat2Array_8_0_128_128_1_2_1_U0</SubModules>
+      <Resources BRAM="8" DSP="15" FF="9107" LUT="6798"/>
+      <LocalResources FF="9" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0" DEPTH="1" TYPE="function" MODULENAME="Array2xfMat_8_0_128_128_1_2_s" DISPNAME="Array2xfMat_8_0_128_128_1_2_U0" RTLNAME="Filter2d_accel_Array2xfMat_8_0_128_128_1_2_s">
+      <SubModules count="1">grp_Axi2Mat_fu_84</SubModules>
+      <Resources DSP="4" FF="921" LUT="668"/>
+      <LocalResources FF="6" LUT="27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84" DEPTH="2" TYPE="function" MODULENAME="Axi2Mat" DISPNAME="grp_Axi2Mat_fu_84" RTLNAME="Filter2d_accel_Axi2Mat">
+      <SubModules count="6">Axi2AxiStream_U0 AxiStream2Mat_U0 cols_c_U ldata_U rows_c_U start_for_AxiStream2Mat_U0_U</SubModules>
+      <Resources DSP="4" FF="915" LUT="641"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/Axi2AxiStream_U0" DEPTH="3" TYPE="function" MODULENAME="Axi2AxiStream" DISPNAME="Axi2AxiStream_U0" RTLNAME="Filter2d_accel_Axi2AxiStream">
+      <SubModules count="1">grp_Axi2AxiStream_Pipeline_VITIS_LOOP_1021_1_fu_108</SubModules>
+      <Resources DSP="1" FF="43" LUT="62"/>
+      <LocalResources DSP="1" FF="15" LUT="23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/Axi2AxiStream_U0/grp_Axi2AxiStream_Pipeline_VITIS_LOOP_1021_1_fu_108" DEPTH="4" TYPE="function" MODULENAME="Axi2AxiStream_Pipeline_VITIS_LOOP_1021_1" DISPNAME="grp_Axi2AxiStream_Pipeline_VITIS_LOOP_1021_1_fu_108" RTLNAME="Filter2d_accel_Axi2AxiStream_Pipeline_VITIS_LOOP_1021_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="28" LUT="39"/>
+      <LocalResources FF="26" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/Axi2AxiStream_U0/grp_Axi2AxiStream_Pipeline_VITIS_LOOP_1021_1_fu_108/flow_control_loop_pipe_sequential_init_U" BINDMODULE="Filter2d_accel_flow_control_loop_pipe_sequential_init" DEPTH="5" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="Filter2d_accel_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="37"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0" DEPTH="3" TYPE="function" MODULENAME="AxiStream2Mat" DISPNAME="AxiStream2Mat_U0" RTLNAME="Filter2d_accel_AxiStream2Mat">
+      <SubModules count="5">AxiStream2MatStream_2_U0 cols_c_U last_blk_pxl_width_U0 last_blk_width_channel_U rows_c_U</SubModules>
+      <Resources DSP="3" FF="709" LUT="497"/>
+      <LocalResources FF="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/AxiStream2MatStream_2_U0" DEPTH="4" TYPE="function" MODULENAME="AxiStream2MatStream_2_s" DISPNAME="AxiStream2MatStream_2_U0" RTLNAME="Filter2d_accel_AxiStream2MatStream_2_s">
+      <SubModules count="2">grp_AxiStream2MatStream_2_Pipeline_MMIterInLoopRow_fu_58 mul_32s_32s_32_5_1_U39</SubModules>
+      <Resources DSP="3" FF="688" LUT="415"/>
+      <LocalResources FF="124" LUT="37"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/grp_AxiStream2MatStream_2_Pipeline_MMIterInLoopRow_fu_58" DEPTH="5" TYPE="function" MODULENAME="AxiStream2MatStream_2_Pipeline_MMIterInLoopRow" DISPNAME="grp_AxiStream2MatStream_2_Pipeline_MMIterInLoopRow_fu_58" RTLNAME="Filter2d_accel_AxiStream2MatStream_2_Pipeline_MMIterInLoopRow">
+      <SubModules count="4">flow_control_loop_pipe_sequential_init_U lshr_8ns_3ns_8_2_1_U25 lshr_8ns_3ns_8_2_1_U27 shl_8ns_3ns_8_2_1_U26</SubModules>
+      <Resources FF="530" LUT="377"/>
+      <LocalResources FF="498" LUT="325"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/grp_AxiStream2MatStream_2_Pipeline_MMIterInLoopRow_fu_58/flow_control_loop_pipe_sequential_init_U" BINDMODULE="Filter2d_accel_flow_control_loop_pipe_sequential_init" DEPTH="6" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="Filter2d_accel_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/grp_AxiStream2MatStream_2_Pipeline_MMIterInLoopRow_fu_58/lshr_8ns_3ns_8_2_1_U25" BINDMODULE="Filter2d_accel_lshr_8ns_3ns_8_2_1" DEPTH="6" TYPE="rtl" MODULENAME="lshr_8ns_3ns_8_2_1" DISPNAME="lshr_8ns_3ns_8_2_1_U25" RTLNAME="Filter2d_accel_lshr_8ns_3ns_8_2_1">
+      <Resources FF="10" LUT="11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/grp_AxiStream2MatStream_2_Pipeline_MMIterInLoopRow_fu_58/lshr_8ns_3ns_8_2_1_U27" BINDMODULE="Filter2d_accel_lshr_8ns_3ns_8_2_1" DEPTH="6" TYPE="rtl" MODULENAME="lshr_8ns_3ns_8_2_1" DISPNAME="lshr_8ns_3ns_8_2_1_U27" RTLNAME="Filter2d_accel_lshr_8ns_3ns_8_2_1">
+      <Resources FF="10" LUT="12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/grp_AxiStream2MatStream_2_Pipeline_MMIterInLoopRow_fu_58/shl_8ns_3ns_8_2_1_U26" BINDMODULE="Filter2d_accel_shl_8ns_3ns_8_2_1" DEPTH="6" TYPE="rtl" MODULENAME="shl_8ns_3ns_8_2_1" DISPNAME="shl_8ns_3ns_8_2_1_U26" RTLNAME="Filter2d_accel_shl_8ns_3ns_8_2_1">
+      <Resources FF="10" LUT="11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/mul_32s_32s_32_5_1_U39" BINDMODULE="Filter2d_accel_mul_32s_32s_32_5_1" DEPTH="5" TYPE="resource" MODULENAME="mul_32s_32s_32_5_1" DISPNAME="mul_32s_32s_32_5_1_U39" RTLNAME="Filter2d_accel_mul_32s_32s_32_5_1">
+      <Resources DSP="3" FF="34" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="dsp" LATENCY="4" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_5_1_U39" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1052" STORAGESUBTYPE="" URAM="0" VARIABLE="bound"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/cols_c_U" BINDMODULE="Filter2d_accel_fifo_w32_d3_S" DEPTH="4" TYPE="resource" MODULENAME="fifo_w32_d3_S" DISPNAME="cols_c_U" RTLNAME="Filter2d_accel_fifo_w32_d3_S">
+      <Resources FF="5" LUT="37"/>
+      <LocalResources FF="5" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cols_c_U" SOURCE=":0" STORAGESIZE="32 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cols_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cols_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1115" STORAGESIZE="32 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cols_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cols_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1353" STORAGESIZE="32 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cols_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/last_blk_pxl_width_U0" DEPTH="4" TYPE="function" MODULENAME="last_blk_pxl_width" DISPNAME="last_blk_pxl_width_U0" RTLNAME="Filter2d_accel_last_blk_pxl_width">
+      <Resources FF="2" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/last_blk_width_channel_U" BINDMODULE="Filter2d_accel_fifo_w4_d2_S" DEPTH="4" TYPE="resource" MODULENAME="fifo_w4_d2_S" DISPNAME="last_blk_width_channel_U" RTLNAME="Filter2d_accel_fifo_w4_d2_S">
+      <Resources FF="7" LUT="4"/>
+      <LocalResources FF="5" LUT="4"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="last_blk_width_channel_U" SOURCE=":0" STORAGESIZE="4 2 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="last_blk_width_channel"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="last_blk_width_channel_U" SOURCE=":0" STORAGESIZE="4 2 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="last_blk_width_channel"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/AxiStream2Mat_U0/rows_c_U" BINDMODULE="Filter2d_accel_fifo_w32_d3_S" DEPTH="4" TYPE="resource" MODULENAME="fifo_w32_d3_S" DISPNAME="rows_c_U" RTLNAME="Filter2d_accel_fifo_w32_d3_S">
+      <Resources FF="5" LUT="39"/>
+      <LocalResources FF="5" LUT="4"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="rows_c_U" SOURCE=":0" STORAGESIZE="32 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="rows_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="rows_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1115" STORAGESIZE="32 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="rows_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="rows_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1353" STORAGESIZE="16 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="rows_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/cols_c_U" BINDMODULE="Filter2d_accel_fifo_w32_d2_S" DEPTH="3" TYPE="resource" MODULENAME="fifo_w32_d2_S" DISPNAME="cols_c_U" RTLNAME="Filter2d_accel_fifo_w32_d2_S">
+      <Resources FF="69" LUT="35"/>
+      <LocalResources FF="5" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cols_c_U" SOURCE=":0" STORAGESIZE="32 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cols_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cols_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1115" STORAGESIZE="32 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cols_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cols_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1353" STORAGESIZE="32 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cols_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/ldata_U" BINDMODULE="Filter2d_accel_fifo_w8_d2_S" DEPTH="3" TYPE="resource" MODULENAME="fifo_w8_d2_S" DISPNAME="ldata_U" RTLNAME="Filter2d_accel_fifo_w8_d2_S">
+      <Resources FF="21" LUT="9"/>
+      <LocalResources FF="5" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="ldata_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1143" STORAGESIZE="8 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="ldata"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="ldata_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1420" STORAGESIZE="8 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="ldata"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/rows_c_U" BINDMODULE="Filter2d_accel_fifo_w32_d2_S" DEPTH="3" TYPE="resource" MODULENAME="fifo_w32_d2_S" DISPNAME="rows_c_U" RTLNAME="Filter2d_accel_fifo_w32_d2_S">
+      <Resources FF="69" LUT="35"/>
+      <LocalResources FF="5" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="rows_c_U" SOURCE=":0" STORAGESIZE="32 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="rows_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="rows_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1115" STORAGESIZE="32 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="rows_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="rows_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1353" STORAGESIZE="16 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="rows_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Array2xfMat_8_0_128_128_1_2_U0/grp_Axi2Mat_fu_84/start_for_AxiStream2Mat_U0_U" BINDMODULE="Filter2d_accel_start_for_AxiStream2Mat_U0" DEPTH="3" TYPE="rtl" MODULENAME="start_for_AxiStream2Mat_U0" DISPNAME="start_for_AxiStream2Mat_U0_U" RTLNAME="Filter2d_accel_start_for_AxiStream2Mat_U0">
+      <Resources FF="4" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/Block_entry1_proc_U0" DEPTH="1" TYPE="function" MODULENAME="Block_entry1_proc" DISPNAME="Block_entry1_proc_U0" RTLNAME="Filter2d_accel_Block_entry1_proc">
+      <Resources FF="65" LUT="70"/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_r_s_axi_U" BINDMODULE="Filter2d_accel_control_r_s_axi" DEPTH="1" TYPE="resource" MODULENAME="control_r_s_axi" DISPNAME="control_r_s_axi_U" RTLNAME="Filter2d_accel_control_r_s_axi">
+      <Resources FF="299" LUT="468"/>
+      <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control_r" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_r_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="Filter2d_accel_control_s_axi" DEPTH="1" TYPE="resource" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="Filter2d_accel_control_s_axi">
+      <Resources FF="127" LUT="110"/>
+      <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/conv_out_c11_U" BINDMODULE="Filter2d_accel_fifo_w64_d5_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w64_d5_S" DISPNAME="conv_out_c11_U" RTLNAME="Filter2d_accel_fifo_w64_d5_S">
+      <Resources FF="6" LUT="77"/>
+      <LocalResources FF="6" LUT="10"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="conv_out_c11_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:112" STORAGESIZE="64 5 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="conv_out_c11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/conv_out_c_U" BINDMODULE="Filter2d_accel_fifo_w64_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w64_d2_S" DISPNAME="conv_out_c_U" RTLNAME="Filter2d_accel_fifo_w64_d2_S">
+      <Resources FF="125" LUT="70"/>
+      <LocalResources FF="5" LUT="6"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="conv_out_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:112" STORAGESIZE="64 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="conv_out_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0" DEPTH="1" TYPE="function" MODULENAME="filter2D_0_3_3_0_0_128_128_1_2_2_s" DISPNAME="filter2D_0_3_3_0_0_128_128_1_2_2_U0" RTLNAME="Filter2d_accel_filter2D_0_3_3_0_0_128_128_1_2_2_s">
+      <SubModules count="2">grp_filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2_fu_129 grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145</SubModules>
+      <Resources BRAM="3" DSP="9" FF="1406" LUT="654"/>
+      <LocalResources FF="46" LUT="7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2_fu_129" DEPTH="2" TYPE="function" MODULENAME="filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2" DISPNAME="grp_filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2_fu_129" RTLNAME="Filter2d_accel_filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="161" LUT="33"/>
+      <LocalResources FF="159" LUT="10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_filter2D_Pipeline_VITIS_LOOP_834_1_VITIS_LOOP_835_2_fu_129/flow_control_loop_pipe_sequential_init_U" BINDMODULE="Filter2d_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="Filter2d_accel_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145" DEPTH="2" TYPE="function" MODULENAME="xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s" DISPNAME="grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145" RTLNAME="Filter2d_accel_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s">
+      <SubModules count="1">grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196</SubModules>
+      <Resources BRAM="3" DSP="9" FF="1199" LUT="614"/>
+      <LocalResources FF="240" LUT="169"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196" DEPTH="3" TYPE="function" MODULENAME="xFFilter2Dkernel_Pipeline_COL_LOOP" DISPNAME="grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196" RTLNAME="Filter2d_accel_xFFilter2Dkernel_Pipeline_COL_LOOP">
+      <SubModules count="8">flow_control_loop_pipe_sequential_init_U grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377 k_buf_1_U k_buf_2_U k_buf_U sparsemux_7_2_8_1_1_U115 sparsemux_7_2_8_1_1_U116 sparsemux_7_2_8_1_1_U117</SubModules>
+      <Resources BRAM="3" DSP="9" FF="959" LUT="445"/>
+      <LocalResources FF="276" LUT="54"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/flow_control_loop_pipe_sequential_init_U" BINDMODULE="Filter2d_accel_flow_control_loop_pipe_sequential_init" DEPTH="4" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="Filter2d_accel_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="92"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377" DEPTH="4" TYPE="function" MODULENAME="xFApplyFilter2D_0_0_3_3_1_s" DISPNAME="grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377" RTLNAME="Filter2d_accel_xFApplyFilter2D_0_0_3_3_1_s">
+      <SubModules count="10">ashr_32s_8ns_32_7_0_U83 mac_muladd_16s_8ns_24s_25_4_0_U84 mac_muladd_16s_8ns_24s_25_4_0_U85 mac_muladd_16s_8ns_24s_25_4_0_U86 mac_muladd_16s_8ns_25s_26_4_0_U87 mac_muladd_16s_8ns_26s_27_4_0_U88 mac_muladd_16s_8ns_27s_28_4_0_U89 mul_16s_8ns_24_4_0_U80 mul_16s_8ns_24_4_0_U81 mul_16s_8ns_24_4_0_U82</SubModules>
+      <Resources DSP="9" FF="681" LUT="245"/>
+      <LocalResources FF="490" LUT="157"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377/ashr_32s_8ns_32_7_0_U83" BINDMODULE="Filter2d_accel_ashr_32s_8ns_32_7_0" DEPTH="5" TYPE="rtl" MODULENAME="ashr_32s_8ns_32_7_0" DISPNAME="ashr_32s_8ns_32_7_0_U83" RTLNAME="Filter2d_accel_ashr_32s_8ns_32_7_0">
+      <Resources FF="191" LUT="86"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377/mac_muladd_16s_8ns_24s_25_4_0_U84" BINDMODULE="Filter2d_accel_mac_muladd_16s_8ns_24s_25_4_0" DEPTH="5" TYPE="resource" MODULENAME="mac_muladd_16s_8ns_24s_25_4_0" DISPNAME="mac_muladd_16s_8ns_24s_25_4_0_U84" RTLNAME="Filter2d_accel_mac_muladd_16s_8ns_24s_25_4_0">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_24s_25_4_0_U84" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:606" STORAGESUBTYPE="" URAM="0" VARIABLE="temp_10"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_24s_25_4_0_U84" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:607" STORAGESUBTYPE="" URAM="0" VARIABLE="sum_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377/mac_muladd_16s_8ns_24s_25_4_0_U85" BINDMODULE="Filter2d_accel_mac_muladd_16s_8ns_24s_25_4_0" DEPTH="5" TYPE="resource" MODULENAME="mac_muladd_16s_8ns_24s_25_4_0" DISPNAME="mac_muladd_16s_8ns_24s_25_4_0_U85" RTLNAME="Filter2d_accel_mac_muladd_16s_8ns_24s_25_4_0">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_24s_25_4_0_U85" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:606" STORAGESUBTYPE="" URAM="0" VARIABLE="temp_4"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_24s_25_4_0_U85" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:607" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln607"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377/mac_muladd_16s_8ns_24s_25_4_0_U86" BINDMODULE="Filter2d_accel_mac_muladd_16s_8ns_24s_25_4_0" DEPTH="5" TYPE="resource" MODULENAME="mac_muladd_16s_8ns_24s_25_4_0" DISPNAME="mac_muladd_16s_8ns_24s_25_4_0_U86" RTLNAME="Filter2d_accel_mac_muladd_16s_8ns_24s_25_4_0">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_24s_25_4_0_U86" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:606" STORAGESUBTYPE="" URAM="0" VARIABLE="temp_8"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_24s_25_4_0_U86" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:607" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln607_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377/mac_muladd_16s_8ns_25s_26_4_0_U87" BINDMODULE="Filter2d_accel_mac_muladd_16s_8ns_25s_26_4_0" DEPTH="5" TYPE="resource" MODULENAME="mac_muladd_16s_8ns_25s_26_4_0" DISPNAME="mac_muladd_16s_8ns_25s_26_4_0_U87" RTLNAME="Filter2d_accel_mac_muladd_16s_8ns_25s_26_4_0">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_25s_26_4_0_U87" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:606" STORAGESUBTYPE="" URAM="0" VARIABLE="temp_6"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_25s_26_4_0_U87" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:607" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln607_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377/mac_muladd_16s_8ns_26s_27_4_0_U88" BINDMODULE="Filter2d_accel_mac_muladd_16s_8ns_26s_27_4_0" DEPTH="5" TYPE="resource" MODULENAME="mac_muladd_16s_8ns_26s_27_4_0" DISPNAME="mac_muladd_16s_8ns_26s_27_4_0_U88" RTLNAME="Filter2d_accel_mac_muladd_16s_8ns_26s_27_4_0">
+      <Resources DSP="1" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_26s_27_4_0_U88" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:606" STORAGESUBTYPE="" URAM="0" VARIABLE="temp_5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_26s_27_4_0_U88" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:607" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln607_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377/mac_muladd_16s_8ns_27s_28_4_0_U89" BINDMODULE="Filter2d_accel_mac_muladd_16s_8ns_27s_28_4_0" DEPTH="5" TYPE="resource" MODULENAME="mac_muladd_16s_8ns_27s_28_4_0" DISPNAME="mac_muladd_16s_8ns_27s_28_4_0_U89" RTLNAME="Filter2d_accel_mac_muladd_16s_8ns_27s_28_4_0">
+      <Resources DSP="1" LUT="2"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_27s_28_4_0_U89" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:606" STORAGESUBTYPE="" URAM="0" VARIABLE="temp_9"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8ns_27s_28_4_0_U89" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:607" STORAGESUBTYPE="" URAM="0" VARIABLE="sum_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377/mul_16s_8ns_24_4_0_U80" BINDMODULE="Filter2d_accel_mul_16s_8ns_24_4_0" DEPTH="5" TYPE="resource" MODULENAME="mul_16s_8ns_24_4_0" DISPNAME="mul_16s_8ns_24_4_0_U80" RTLNAME="Filter2d_accel_mul_16s_8ns_24_4_0">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_8ns_24_4_0_U80" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:606" STORAGESUBTYPE="" URAM="0" VARIABLE="temp"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377/mul_16s_8ns_24_4_0_U81" BINDMODULE="Filter2d_accel_mul_16s_8ns_24_4_0" DEPTH="5" TYPE="resource" MODULENAME="mul_16s_8ns_24_4_0" DISPNAME="mul_16s_8ns_24_4_0_U81" RTLNAME="Filter2d_accel_mul_16s_8ns_24_4_0">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_8ns_24_4_0_U81" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:606" STORAGESUBTYPE="" URAM="0" VARIABLE="temp_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/grp_xFApplyFilter2D_0_0_3_3_1_s_fu_377/mul_16s_8ns_24_4_0_U82" BINDMODULE="Filter2d_accel_mul_16s_8ns_24_4_0" DEPTH="5" TYPE="resource" MODULENAME="mul_16s_8ns_24_4_0" DISPNAME="mul_16s_8ns_24_4_0_U82" RTLNAME="Filter2d_accel_mul_16s_8ns_24_4_0">
+      <Resources DSP="1" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_8ns_24_4_0_U82" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:606" STORAGESUBTYPE="" URAM="0" VARIABLE="temp_7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/k_buf_1_U" BINDMODULE="Filter2d_accel_xFFilter2Dkernel_Pipeline_COL_LOOP_k_buf_RAM_AUTO_2R1W" DEPTH="4" TYPE="resource" MODULENAME="xFFilter2Dkernel_Pipeline_COL_LOOP_k_buf_RAM_AUTO_2R1W" DISPNAME="k_buf_1_U" RTLNAME="Filter2d_accel_xFFilter2Dkernel_Pipeline_COL_LOOP_k_buf_RAM_AUTO_2R1W">
+      <Resources BRAM="1" LUT="8"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="2" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="k_buf_1_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:675" STORAGESIZE="8 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p array" URAM="0" VARIABLE="k_buf_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/k_buf_2_U" BINDMODULE="Filter2d_accel_xFFilter2Dkernel_Pipeline_COL_LOOP_k_buf_RAM_AUTO_2R1W" DEPTH="4" TYPE="resource" MODULENAME="xFFilter2Dkernel_Pipeline_COL_LOOP_k_buf_RAM_AUTO_2R1W" DISPNAME="k_buf_2_U" RTLNAME="Filter2d_accel_xFFilter2Dkernel_Pipeline_COL_LOOP_k_buf_RAM_AUTO_2R1W">
+      <Resources BRAM="1" LUT="20"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="2" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="k_buf_2_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:675" STORAGESIZE="8 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p array" URAM="0" VARIABLE="k_buf_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/k_buf_U" BINDMODULE="Filter2d_accel_xFFilter2Dkernel_Pipeline_COL_LOOP_k_buf_RAM_AUTO_2R1W" DEPTH="4" TYPE="resource" MODULENAME="xFFilter2Dkernel_Pipeline_COL_LOOP_k_buf_RAM_AUTO_2R1W" DISPNAME="k_buf_U" RTLNAME="Filter2d_accel_xFFilter2Dkernel_Pipeline_COL_LOOP_k_buf_RAM_AUTO_2R1W">
+      <Resources BRAM="1" LUT="2"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="2" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="k_buf_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/imgproc/xf_custom_convolution.hpp:675" STORAGESIZE="8 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p array" URAM="0" VARIABLE="k_buf"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/sparsemux_7_2_8_1_1_U115" BINDMODULE="Filter2d_accel_sparsemux_7_2_8_1_1" DEPTH="4" TYPE="rtl" MODULENAME="sparsemux_7_2_8_1_1" DISPNAME="sparsemux_7_2_8_1_1_U115" RTLNAME="Filter2d_accel_sparsemux_7_2_8_1_1">
+      <Resources LUT="8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/sparsemux_7_2_8_1_1_U116" BINDMODULE="Filter2d_accel_sparsemux_7_2_8_1_1" DEPTH="4" TYPE="rtl" MODULENAME="sparsemux_7_2_8_1_1" DISPNAME="sparsemux_7_2_8_1_1_U116" RTLNAME="Filter2d_accel_sparsemux_7_2_8_1_1">
+      <Resources LUT="8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/filter2D_0_3_3_0_0_128_128_1_2_2_U0/grp_xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s_fu_145/grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196/sparsemux_7_2_8_1_1_U117" BINDMODULE="Filter2d_accel_sparsemux_7_2_8_1_1" DEPTH="4" TYPE="rtl" MODULENAME="sparsemux_7_2_8_1_1" DISPNAME="sparsemux_7_2_8_1_1_U117" RTLNAME="Filter2d_accel_sparsemux_7_2_8_1_1">
+      <Resources LUT="8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem0_m_axi_U" BINDMODULE="Filter2d_accel_gmem0_m_axi" DEPTH="1" TYPE="resource" MODULENAME="gmem0_m_axi" DISPNAME="gmem0_m_axi_U" RTLNAME="Filter2d_accel_gmem0_m_axi">
+      <Resources BRAM="1" FF="854" LUT="661"/>
+      <BindNode BINDTYPE="adapter" BRAM="2" BUNDLEDNAME="gmem0" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem0_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem1_m_axi_U" BINDMODULE="Filter2d_accel_gmem1_m_axi" DEPTH="1" TYPE="resource" MODULENAME="gmem1_m_axi" DISPNAME="gmem1_m_axi_U" RTLNAME="Filter2d_accel_gmem1_m_axi">
+      <Resources BRAM="1" FF="798" LUT="583"/>
+      <BindNode BINDTYPE="adapter" BRAM="2" BUNDLEDNAME="gmem1" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem1_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem2_m_axi_U" BINDMODULE="Filter2d_accel_gmem2_m_axi" DEPTH="1" TYPE="resource" MODULENAME="gmem2_m_axi" DISPNAME="gmem2_m_axi_U" RTLNAME="Filter2d_accel_gmem2_m_axi">
+      <Resources BRAM="2" FF="1980" LUT="1515"/>
+      <BindNode BINDTYPE="adapter" BRAM="2" BUNDLEDNAME="gmem2" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem2_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem3_m_axi_U" BINDMODULE="Filter2d_accel_gmem3_m_axi" DEPTH="1" TYPE="resource" MODULENAME="gmem3_m_axi" DISPNAME="gmem3_m_axi_U" RTLNAME="Filter2d_accel_gmem3_m_axi">
+      <Resources BRAM="1" FF="1146" LUT="879"/>
+      <BindNode BINDTYPE="adapter" BRAM="2" BUNDLEDNAME="gmem3" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem3_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/imgInput_cols_c13_channel_U" BINDMODULE="Filter2d_accel_fifo_w32_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d2_S_x" DISPNAME="imgInput_cols_c13_channel_U" RTLNAME="Filter2d_accel_fifo_w32_d2_S_x">
+      <Resources FF="69" LUT="45"/>
+      <LocalResources FF="5" LUT="10"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="imgInput_cols_c13_channel_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:112" STORAGESIZE="32 2 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="imgInput_cols_c13_channel"/>
+    </RtlModule>
+    <RtlModule CELL="inst/imgInput_cols_c_U" BINDMODULE="Filter2d_accel_fifo_w32_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d2_S_x" DISPNAME="imgInput_cols_c_U" RTLNAME="Filter2d_accel_fifo_w32_d2_S_x">
+      <Resources FF="37" LUT="21"/>
+      <LocalResources FF="5" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="imgInput_cols_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:112" STORAGESIZE="32 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="imgInput_cols_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/imgInput_data_U" BINDMODULE="Filter2d_accel_fifo_w8_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d2_S_x0" DISPNAME="imgInput_data_U" RTLNAME="Filter2d_accel_fifo_w8_d2_S_x0">
+      <Resources FF="21" LUT="12"/>
+      <LocalResources FF="5" LUT="4"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="imgInput_data_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:109" STORAGESIZE="8 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="imgInput_data"/>
+    </RtlModule>
+    <RtlModule CELL="inst/imgInput_rows_c12_channel_U" BINDMODULE="Filter2d_accel_fifo_w32_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d2_S_x" DISPNAME="imgInput_rows_c12_channel_U" RTLNAME="Filter2d_accel_fifo_w32_d2_S_x">
+      <Resources FF="69" LUT="38"/>
+      <LocalResources FF="5" LUT="6"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="imgInput_rows_c12_channel_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:112" STORAGESIZE="32 2 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="imgInput_rows_c12_channel"/>
+    </RtlModule>
+    <RtlModule CELL="inst/imgInput_rows_c_U" BINDMODULE="Filter2d_accel_fifo_w32_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d2_S_x" DISPNAME="imgInput_rows_c_U" RTLNAME="Filter2d_accel_fifo_w32_d2_S_x">
+      <Resources FF="37" LUT="21"/>
+      <LocalResources FF="5" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="imgInput_rows_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:112" STORAGESIZE="32 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="imgInput_rows_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/imgOutput_cols_channel_U" BINDMODULE="Filter2d_accel_fifo_w32_d4_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d4_S" DISPNAME="imgOutput_cols_channel_U" RTLNAME="Filter2d_accel_fifo_w32_d4_S">
+      <Resources FF="5" LUT="41"/>
+      <LocalResources FF="5" LUT="6"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="imgOutput_cols_channel_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:112" STORAGESIZE="32 4 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="imgOutput_cols_channel"/>
+    </RtlModule>
+    <RtlModule CELL="inst/imgOutput_data_U" BINDMODULE="Filter2d_accel_fifo_w8_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d2_S_x0" DISPNAME="imgOutput_data_U" RTLNAME="Filter2d_accel_fifo_w8_d2_S_x0">
+      <Resources FF="21" LUT="13"/>
+      <LocalResources FF="5" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="imgOutput_data_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:110" STORAGESIZE="8 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="imgOutput_data"/>
+    </RtlModule>
+    <RtlModule CELL="inst/imgOutput_rows_channel_U" BINDMODULE="Filter2d_accel_fifo_w32_d4_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d4_S" DISPNAME="imgOutput_rows_channel_U" RTLNAME="Filter2d_accel_fifo_w32_d4_S">
+      <Resources FF="5" LUT="26"/>
+      <LocalResources FF="5" LUT="7"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="imgOutput_rows_channel_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:112" STORAGESIZE="32 4 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="imgOutput_rows_channel"/>
+    </RtlModule>
+    <RtlModule CELL="inst/maxpool_out_c_U" BINDMODULE="Filter2d_accel_fifo_w64_d6_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w64_d6_S" DISPNAME="maxpool_out_c_U" RTLNAME="Filter2d_accel_fifo_w64_d6_S">
+      <Resources FF="6" LUT="77"/>
+      <LocalResources FF="6" LUT="10"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="maxpool_out_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:112" STORAGESIZE="64 6 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="maxpool_out_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/pool_gpt_U0" DEPTH="1" TYPE="function" MODULENAME="pool_gpt" DISPNAME="pool_gpt_U0" RTLNAME="Filter2d_accel_pool_gpt">
+      <SubModules count="1">grp_pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2_fu_66</SubModules>
+      <Resources FF="489" LUT="232"/>
+      <LocalResources FF="139" LUT="73"/>
+    </RtlModule>
+    <RtlModule CELL="inst/pool_gpt_U0/grp_pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2_fu_66" DEPTH="2" TYPE="function" MODULENAME="pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2" DISPNAME="grp_pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2_fu_66" RTLNAME="Filter2d_accel_pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2">
+      <SubModules count="3">add_64ns_64ns_64_2_1_U237 add_64ns_64ns_64_2_1_U238 flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="350" LUT="159"/>
+      <LocalResources FF="250" LUT="100"/>
+    </RtlModule>
+    <RtlModule CELL="inst/pool_gpt_U0/grp_pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2_fu_66/add_64ns_64ns_64_2_1_U237" BINDMODULE="Filter2d_accel_add_64ns_64ns_64_2_1" DEPTH="3" TYPE="resource" MODULENAME="add_64ns_64ns_64_2_1" DISPNAME="add_64ns_64ns_64_2_1_U237" RTLNAME="Filter2d_accel_add_64ns_64ns_64_2_1">
+      <Resources FF="65" LUT="15"/>
+      <LocalResources FF="65" LUT="3"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="VITIS_LOOP_9_1_VITIS_LOOP_10_2" OPTYPE="add" PRAGMA="" RTLNAME="add_64ns_64ns_64_2_1_U237" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:9" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_48"/>
+    </RtlModule>
+    <RtlModule CELL="inst/pool_gpt_U0/grp_pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2_fu_66/add_64ns_64ns_64_2_1_U238" BINDMODULE="Filter2d_accel_add_64ns_64ns_64_2_1" DEPTH="3" TYPE="resource" MODULENAME="add_64ns_64ns_64_2_1" DISPNAME="add_64ns_64ns_64_2_1_U238" RTLNAME="Filter2d_accel_add_64ns_64ns_64_2_1">
+      <Resources FF="33" LUT="13"/>
+      <LocalResources FF="33"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="VITIS_LOOP_9_1_VITIS_LOOP_10_2" OPTYPE="add" PRAGMA="" RTLNAME="add_64ns_64ns_64_2_1_U238" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/examples/customconv/xf_custom_convolution_accel.cpp:9" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_50"/>
+    </RtlModule>
+    <RtlModule CELL="inst/pool_gpt_U0/grp_pool_gpt_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2_fu_66/flow_control_loop_pipe_sequential_init_U" BINDMODULE="Filter2d_accel_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="Filter2d_accel_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="31"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0" DEPTH="1" TYPE="function" MODULENAME="xfMat2Array_8_0_128_128_1_2_1_s" DISPNAME="xfMat2Array_8_0_128_128_1_2_1_U0" RTLNAME="Filter2d_accel_xfMat2Array_8_0_128_128_1_2_1_s">
+      <SubModules count="1">grp_Mat2Axi_fu_74</SubModules>
+      <Resources DSP="2" FF="612" LUT="514"/>
+      <LocalResources FF="30" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74" DEPTH="2" TYPE="function" MODULENAME="Mat2Axi" DISPNAME="grp_Mat2Axi_fu_74" RTLNAME="Filter2d_accel_Mat2Axi">
+      <SubModules count="8">AxiStream2Axi_U0 Mat2AxiStream_U0 Mat2Axi_Block_entry24_proc_U0 addrbound_U0 axibound_U dout_c_U ldata_U p_channel_U</SubModules>
+      <Resources DSP="2" FF="582" LUT="511"/>
+      <LocalResources FF="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/AxiStream2Axi_U0" DEPTH="3" TYPE="function" MODULENAME="AxiStream2Axi" DISPNAME="AxiStream2Axi_U0" RTLNAME="Filter2d_accel_AxiStream2Axi">
+      <SubModules count="1">grp_AxiStream2Axi_Pipeline_MMIterOutLoop2_fu_67</SubModules>
+      <Resources FF="118" LUT="92"/>
+      <LocalResources FF="75" LUT="48"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/AxiStream2Axi_U0/grp_AxiStream2Axi_Pipeline_MMIterOutLoop2_fu_67" DEPTH="4" TYPE="function" MODULENAME="AxiStream2Axi_Pipeline_MMIterOutLoop2" DISPNAME="grp_AxiStream2Axi_Pipeline_MMIterOutLoop2_fu_67" RTLNAME="Filter2d_accel_AxiStream2Axi_Pipeline_MMIterOutLoop2">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="43" LUT="44"/>
+      <LocalResources FF="41" LUT="10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/AxiStream2Axi_U0/grp_AxiStream2Axi_Pipeline_MMIterOutLoop2_fu_67/flow_control_loop_pipe_sequential_init_U" BINDMODULE="Filter2d_accel_flow_control_loop_pipe_sequential_init" DEPTH="5" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="Filter2d_accel_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0" DEPTH="3" TYPE="function" MODULENAME="Mat2AxiStream" DISPNAME="Mat2AxiStream_U0" RTLNAME="Filter2d_accel_Mat2AxiStream">
+      <SubModules count="5">MatStream2AxiStream_2_U0 cols_c_U last_blk_pxl_width_1_U0 last_blk_width_channel_U rows_c_U</SubModules>
+      <Resources DSP="1" FF="328" LUT="253"/>
+      <LocalResources FF="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0/MatStream2AxiStream_2_U0" DEPTH="4" TYPE="function" MODULENAME="MatStream2AxiStream_2_s" DISPNAME="MatStream2AxiStream_2_U0" RTLNAME="Filter2d_accel_MatStream2AxiStream_2_s">
+      <SubModules count="2">grp_MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol_fu_79 mul_16ns_16ns_32_4_1_U200</SubModules>
+      <Resources DSP="1" FF="307" LUT="168"/>
+      <LocalResources FF="105" LUT="35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0/MatStream2AxiStream_2_U0/grp_MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol_fu_79" DEPTH="5" TYPE="function" MODULENAME="MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol" DISPNAME="grp_MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol_fu_79" RTLNAME="Filter2d_accel_MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol">
+      <SubModules count="3">flow_control_loop_pipe_sequential_init_U lshr_8ns_8ns_8_2_1_U188 shl_8ns_4ns_8_2_1_U186</SubModules>
+      <Resources FF="202" LUT="133"/>
+      <LocalResources FF="183" LUT="118"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0/MatStream2AxiStream_2_U0/grp_MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol_fu_79/flow_control_loop_pipe_sequential_init_U" BINDMODULE="Filter2d_accel_flow_control_loop_pipe_sequential_init" DEPTH="6" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="Filter2d_accel_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0/MatStream2AxiStream_2_U0/grp_MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol_fu_79/lshr_8ns_8ns_8_2_1_U188" BINDMODULE="Filter2d_accel_lshr_8ns_8ns_8_2_1" DEPTH="6" TYPE="rtl" MODULENAME="lshr_8ns_8ns_8_2_1" DISPNAME="lshr_8ns_8ns_8_2_1_U188" RTLNAME="Filter2d_accel_lshr_8ns_8ns_8_2_1">
+      <Resources FF="9" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0/MatStream2AxiStream_2_U0/grp_MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol_fu_79/shl_8ns_4ns_8_2_1_U186" BINDMODULE="Filter2d_accel_shl_8ns_4ns_8_2_1" DEPTH="6" TYPE="rtl" MODULENAME="shl_8ns_4ns_8_2_1" DISPNAME="shl_8ns_4ns_8_2_1_U186" RTLNAME="Filter2d_accel_shl_8ns_4ns_8_2_1">
+      <Resources FF="8" LUT="4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0/MatStream2AxiStream_2_U0/mul_16ns_16ns_32_4_1_U200" BINDMODULE="Filter2d_accel_mul_16ns_16ns_32_4_1" DEPTH="5" TYPE="resource" MODULENAME="mul_16ns_16ns_32_4_1" DISPNAME="mul_16ns_16ns_32_4_1_U200" RTLNAME="Filter2d_accel_mul_16ns_16ns_32_4_1">
+      <Resources DSP="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16ns_16ns_32_4_1_U200" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1289" STORAGESUBTYPE="" URAM="0" VARIABLE="bound"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0/cols_c_U" BINDMODULE="Filter2d_accel_fifo_w32_d3_S" DEPTH="4" TYPE="resource" MODULENAME="fifo_w32_d3_S_x" DISPNAME="cols_c_U" RTLNAME="Filter2d_accel_fifo_w32_d3_S_x">
+      <Resources FF="5" LUT="44"/>
+      <LocalResources FF="5" LUT="9"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cols_c_U" SOURCE=":0" STORAGESIZE="32 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cols_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cols_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1115" STORAGESIZE="32 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cols_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cols_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1353" STORAGESIZE="32 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="cols_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0/last_blk_pxl_width_1_U0" DEPTH="4" TYPE="function" MODULENAME="last_blk_pxl_width_1" DISPNAME="last_blk_pxl_width_1_U0" RTLNAME="Filter2d_accel_last_blk_pxl_width_1">
+      <Resources FF="2" LUT="6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0/last_blk_width_channel_U" BINDMODULE="Filter2d_accel_fifo_w4_d2_S" DEPTH="4" TYPE="resource" MODULENAME="fifo_w4_d2_S_x" DISPNAME="last_blk_width_channel_U" RTLNAME="Filter2d_accel_fifo_w4_d2_S_x">
+      <Resources FF="7" LUT="6"/>
+      <LocalResources FF="5" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="last_blk_width_channel_U" SOURCE=":0" STORAGESIZE="4 2 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="last_blk_width_channel"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="last_blk_width_channel_U" SOURCE=":0" STORAGESIZE="4 2 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="last_blk_width_channel"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2AxiStream_U0/rows_c_U" BINDMODULE="Filter2d_accel_fifo_w16_d3_S" DEPTH="4" TYPE="resource" MODULENAME="fifo_w16_d3_S" DISPNAME="rows_c_U" RTLNAME="Filter2d_accel_fifo_w16_d3_S">
+      <Resources FF="5" LUT="29"/>
+      <LocalResources FF="5" LUT="10"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="rows_c_U" SOURCE=":0" STORAGESIZE="32 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="rows_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="rows_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1115" STORAGESIZE="32 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="rows_c"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="rows_c_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1353" STORAGESIZE="16 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="rows_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/Mat2Axi_Block_entry24_proc_U0" DEPTH="3" TYPE="function" MODULENAME="Mat2Axi_Block_entry24_proc" DISPNAME="Mat2Axi_Block_entry24_proc_U0" RTLNAME="Filter2d_accel_Mat2Axi_Block_entry24_proc">
+      <Resources FF="16" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/addrbound_U0" DEPTH="3" TYPE="function" MODULENAME="addrbound" DISPNAME="addrbound_U0" RTLNAME="Filter2d_accel_addrbound">
+      <Resources DSP="1" FF="21" LUT="17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/axibound_U" BINDMODULE="Filter2d_accel_fifo_w15_d2_S" DEPTH="3" TYPE="resource" MODULENAME="fifo_w15_d2_S" DISPNAME="axibound_U" RTLNAME="Filter2d_accel_fifo_w15_d2_S">
+      <Resources FF="35" LUT="38"/>
+      <LocalResources FF="5" LUT="8"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="axibound_U" SOURCE=":0" STORAGESIZE="15 2 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="axibound"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/dout_c_U" BINDMODULE="Filter2d_accel_fifo_w64_d4_S" DEPTH="3" TYPE="resource" MODULENAME="fifo_w64_d4_S" DISPNAME="dout_c_U" RTLNAME="Filter2d_accel_fifo_w64_d4_S">
+      <Resources FF="5" LUT="75"/>
+      <LocalResources FF="5" LUT="8"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="dout_c_U" SOURCE=":0" STORAGESIZE="64 4 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="dout_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/ldata_U" BINDMODULE="Filter2d_accel_fifo_w8_d2_S" DEPTH="3" TYPE="resource" MODULENAME="fifo_w8_d2_S_x" DISPNAME="ldata_U" RTLNAME="Filter2d_accel_fifo_w8_d2_S_x">
+      <Resources FF="21" LUT="13"/>
+      <LocalResources FF="5" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="ldata_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1143" STORAGESIZE="8 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="ldata"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="ldata_U" SOURCE="/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/../../../L1/include/common/xf_structs.hpp:1420" STORAGESIZE="8 2 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="ldata"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xfMat2Array_8_0_128_128_1_2_1_U0/grp_Mat2Axi_fu_74/p_channel_U" BINDMODULE="Filter2d_accel_fifo_w15_d2_S" DEPTH="3" TYPE="resource" MODULENAME="fifo_w15_d2_S" DISPNAME="p_channel_U" RTLNAME="Filter2d_accel_fifo_w15_d2_S">
+      <Resources FF="35" LUT="22"/>
+      <LocalResources FF="5" LUT="6"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_channel_U" SOURCE=":0" STORAGESIZE="15 2 1" STORAGESUBTYPE="task level" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="p_channel"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="5.196" DATAPATH_LOGIC_DELAY="1.295" DATAPATH_NET_DELAY="3.901" ENDPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[0]/R" LOGIC_LEVELS="7" MAX_FANOUT="30" SLACK="-2.394" STARTPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]/C">
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_9__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_7" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.196" DATAPATH_LOGIC_DELAY="1.295" DATAPATH_NET_DELAY="3.901" ENDPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[10]/R" LOGIC_LEVELS="7" MAX_FANOUT="30" SLACK="-2.394" STARTPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]/C">
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_9__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_7" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[10]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.196" DATAPATH_LOGIC_DELAY="1.295" DATAPATH_NET_DELAY="3.901" ENDPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[11]/R" LOGIC_LEVELS="7" MAX_FANOUT="30" SLACK="-2.394" STARTPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]/C">
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_9__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_7" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[11]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.196" DATAPATH_LOGIC_DELAY="1.295" DATAPATH_NET_DELAY="3.901" ENDPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[12]/R" LOGIC_LEVELS="7" MAX_FANOUT="30" SLACK="-2.394" STARTPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]/C">
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_9__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_7" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[12]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.196" DATAPATH_LOGIC_DELAY="1.295" DATAPATH_NET_DELAY="3.901" ENDPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[13]/R" LOGIC_LEVELS="7" MAX_FANOUT="30" SLACK="-2.394" STARTPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]/C">
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_9__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_7" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.196" DATAPATH_LOGIC_DELAY="1.295" DATAPATH_NET_DELAY="3.901" ENDPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[14]/R" LOGIC_LEVELS="7" MAX_FANOUT="30" SLACK="-2.394" STARTPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]/C">
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_9__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_7" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[14]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.196" DATAPATH_LOGIC_DELAY="1.295" DATAPATH_NET_DELAY="3.901" ENDPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[15]/R" LOGIC_LEVELS="7" MAX_FANOUT="30" SLACK="-2.394" STARTPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]/C">
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_9__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_7" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[15]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.196" DATAPATH_LOGIC_DELAY="1.295" DATAPATH_NET_DELAY="3.901" ENDPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[16]/R" LOGIC_LEVELS="7" MAX_FANOUT="30" SLACK="-2.394" STARTPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]/C">
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_9__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_7" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[16]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.196" DATAPATH_LOGIC_DELAY="1.295" DATAPATH_NET_DELAY="3.901" ENDPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[17]/R" LOGIC_LEVELS="7" MAX_FANOUT="30" SLACK="-2.394" STARTPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]/C">
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_9__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_7" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[17]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.196" DATAPATH_LOGIC_DELAY="1.295" DATAPATH_NET_DELAY="3.901" ENDPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[18]/R" LOGIC_LEVELS="7" MAX_FANOUT="30" SLACK="-2.394" STARTPOINT_PIN="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]/C">
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_9__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.pad_oh_reg[3]_i_3__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_7" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4__0" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1__0" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="606"/>
+      <CELL NAME="gmem3_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[18]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/Filter2d_accel_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/Filter2d_accel_failfast_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/Filter2d_accel_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/Filter2d_accel_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/Filter2d_accel_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/Filter2d_accel_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Sat May 04 12:25:54 PDT 2024"/>
+    <item NAME="Version" VALUE="2023.2 (Build 4023990 on Oct 11 2023)"/>
+    <item NAME="Project" VALUE="customconv_ked.prj"/>
+    <item NAME="Solution" VALUE="sol1 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynq"/>
+    <item NAME="Target device" VALUE="xc7z020-clg484-2"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="3.3 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="3.3 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

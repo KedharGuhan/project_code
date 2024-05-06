@@ -1,0 +1,796 @@
+---
+MainSourceFile:  /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1207_1:  '
+    FileOffset:      1207
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          59953
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          287781
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          288249
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          288718
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          572673
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_307_1:  '
+    FileOffset:      307
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1293910
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_307_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_321_1:  '
+    FileOffset:      321
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1294108
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_321_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_336_1:  '
+    FileOffset:      336
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1294342
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_336_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_351_1:  '
+    FileOffset:      351
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1294572
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_351_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_366_1:  '
+    FileOffset:      366
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1294806
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_366_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_381_1:  '
+    FileOffset:      381
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1295036
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_381_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_396_1:  '
+    FileOffset:      396
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1295270
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_396_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_411_1:  '
+    FileOffset:      411
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1295500
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_411_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_426_1:  '
+    FileOffset:      426
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1295734
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_426_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_511_1:  '
+    FileOffset:      511
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1297362
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_511_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_719_1:  '
+    FileOffset:      719
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1302982
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_719_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_720_2:  '
+    FileOffset:      720
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1303023
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_720_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_721_3:  '
+    FileOffset:      721
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1303072
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_721_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_723_4:  '
+    FileOffset:      723
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1303155
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_723_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_761_1:  '
+    FileOffset:      761
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1304377
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_761_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_762_2:  '
+    FileOffset:      762
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1304418
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_762_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_764_3:  '
+    FileOffset:      764
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1304507
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_764_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_765_4:  '
+    FileOffset:      765
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1304581
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_765_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_819_1:  '
+    FileOffset:      819
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1306343
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_819_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_820_2:  '
+    FileOffset:      820
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1306384
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_820_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_828_3:  '
+    FileOffset:      828
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1306811
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_828_3: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, mul + dsp is invalid combination for bind_op'
+    FileOffset:      949
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1021_1:  '
+    FileOffset:      1021
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1314460
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1021_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1429_1:  '
+    FileOffset:      1429
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1330028
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1429_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1457_1:  '
+    FileOffset:      1457
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1331106
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1457_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1487_1:  '
+    FileOffset:      1487
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1332317
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1487_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1517_1:  '
+    FileOffset:      1517
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1333504
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1517_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_122_1:  '
+    FileOffset:      122
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1350075
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_122_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_126_2:  '
+    FileOffset:      126
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1350126
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_126_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_166_1:  '
+    FileOffset:      166
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1350484
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_166_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_170_2:  '
+    FileOffset:      170
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1350535
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_170_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_210_1:  '
+    FileOffset:      210
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1350890
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_210_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_214_2:  '
+    FileOffset:      214
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1350945
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_214_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_254_1:  '
+    FileOffset:      254
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1351298
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_254_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_258_2:  '
+    FileOffset:      258
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1351353
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_258_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_330_1:  '
+    FileOffset:      330
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1352109
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_330_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_435_1:  '
+    FileOffset:      435
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1353010
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_435_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_1P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      711
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_1P + URAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      716
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      721
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + URAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      726
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_S2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      731
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_S2P + URAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      736
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_T2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      741
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_T2P + URAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      746
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_824_1:  '
+    FileOffset:      824
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1358033
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_824_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_867_1:  '
+    FileOffset:      867
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1358544
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_867_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_968_1:  '
+    FileOffset:      968
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1359924
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_968_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_39_1:  '
+    FileOffset:      39
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1362238
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_39_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_58_1:  '
+    FileOffset:      58
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1362814
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_58_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_86_1:  '
+    FileOffset:      86
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1363581
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_86_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_119_1:  '
+    FileOffset:      119
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1364607
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_119_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_153_1:  '
+    FileOffset:      153
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1365614
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_153_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_181_1:  '
+    FileOffset:      181
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1366377
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_181_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_205_1:  '
+    FileOffset:      205
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1367031
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_205_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_228_1:  '
+    FileOffset:      228
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1367744
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_228_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_263_1:  '
+    FileOffset:      263
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1368614
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_263_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_265_2:  '
+    FileOffset:      265
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1368674
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_265_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_325_1:  '
+    FileOffset:      325
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1370734
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_325_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_397_1:  '
+    FileOffset:      397
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1373891
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_397_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_468_1:  '
+    FileOffset:      468
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1375729
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_468_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_473_2:  '
+    FileOffset:      473
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1375845
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_473_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_499_1:  '
+    FileOffset:      499
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1376502
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_499_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_623_1:  '
+    FileOffset:      623
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1380689
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_623_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_737_1:  '
+    FileOffset:      737
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1385377
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_737_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_788_1:  '
+    FileOffset:      788
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1386591
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_788_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_595_1:  '
+    FileOffset:      595
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1404574
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_595_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_599_2:  '
+    FileOffset:      599
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1404702
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_599_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_726_1:  '
+    FileOffset:      726
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1408224
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_726_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_727_2:  '
+    FileOffset:      727
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1408287
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_727_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_730_3:  '
+    FileOffset:      730
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1408428
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_730_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_747_4:  '
+    FileOffset:      747
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1409099
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_747_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_762_5:  '
+    FileOffset:      762
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1409861
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_762_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_766_6:  '
+    FileOffset:      766
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1410069
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_766_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_777_7:  '
+    FileOffset:      777
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1410419
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_777_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_834_1:  '
+    FileOffset:      834
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1412257
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_834_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_835_2:  '
+    FileOffset:      835
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/include/imgproc/xf_custom_convolution.hpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1412317
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_835_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_9_1:  '
+    FileOffset:      9
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/xf_custom_convolution_accel.cpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1414669
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_9_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_10_2:  '
+    FileOffset:      10
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/xf_custom_convolution_accel.cpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1414718
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_10_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_15_3:  '
+    FileOffset:      15
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/xf_custom_convolution_accel.cpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1414810
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_15_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_16_4:  '
+    FileOffset:      16
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/xf_custom_convolution_accel.cpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1414859
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_16_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_43_1:  '
+    FileOffset:      43
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/xf_custom_convolution_accel.cpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1415380
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_43_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_44_2:  '
+    FileOffset:      44
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/xf_custom_convolution_accel.cpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1415421
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_44_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_55_1:  '
+    FileOffset:      55
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/xf_custom_convolution_accel.cpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1415535
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_55_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_56_2:  '
+    FileOffset:      56
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/xf_custom_convolution_accel.cpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1415576
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_56_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_69_1:  '
+    FileOffset:      69
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/xf_custom_convolution_accel.cpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1415697
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_69_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_70_2:  '
+    FileOffset:      70
+    FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/xf_custom_convolution_accel.cpp
+    Replacements:    
+      - FilePath:        /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp
+        Offset:          1415738
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_70_2: '
+...

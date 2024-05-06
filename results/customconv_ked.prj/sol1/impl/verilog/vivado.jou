@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat May  4 12:16:14 2024
+# Process ID: 151501
+# Current directory: /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/impl/verilog
+# Command line: vivado -mode batch -source run_vivado.tcl
+# Log file: /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/impl/verilog/vivado.log
+# Journal file: /home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/impl/verilog/vivado.jou
+# Running On: kd-laptop, OS: Linux, CPU Frequency: 2799.487 MHz, CPU Physical cores: 2, Host memory: 12333 MB
+#-----------------------------------------------------------
+source run_vivado.tcl

@@ -1,0 +1,442 @@
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:1449:7: warning: Added loop label VITIS_LOOP_1207_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1207_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:1449:7: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:2423:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:2423:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:2437:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:2437:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:2451:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:2451:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:4080:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:4080:7: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18311:2: warning: Added loop label VITIS_LOOP_307_1:   [xilinx-label-all-loops]
+ for (int k = 0; k < N; k++) {
+ ^~~
+ VITIS_LOOP_307_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18311:2: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18325:5: warning: Added loop label VITIS_LOOP_321_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_321_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18325:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18340:5: warning: Added loop label VITIS_LOOP_336_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_336_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18340:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18355:5: warning: Added loop label VITIS_LOOP_351_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_351_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18355:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18370:5: warning: Added loop label VITIS_LOOP_366_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_366_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18370:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18385:5: warning: Added loop label VITIS_LOOP_381_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_381_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18385:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18400:5: warning: Added loop label VITIS_LOOP_396_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_396_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18400:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18415:5: warning: Added loop label VITIS_LOOP_411_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_411_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18415:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18430:5: warning: Added loop label VITIS_LOOP_426_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^~~
+    VITIS_LOOP_426_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18430:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18507:9: warning: Added loop label VITIS_LOOP_511_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < (rows * ((cols + NPC - 1) >> xfNPixelsPerCycle<NPC>::datashift)); ++i) {
+        ^~~
+        VITIS_LOOP_511_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18507:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18715:5: warning: Added loop label VITIS_LOOP_719_1:   [xilinx-label-all-loops]
+    for (int r = 0; r < rows; r++) {
+    ^~~
+    VITIS_LOOP_719_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18715:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18716:9: warning: Added loop label VITIS_LOOP_720_2:   [xilinx-label-all-loops]
+        for (int c = 0; c < packcols; c++) {
+        ^~~
+        VITIS_LOOP_720_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18716:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18717:13: warning: Added loop label VITIS_LOOP_721_3:   [xilinx-label-all-loops]
+            for (int p = 0; p < nppc; p++) {
+            ^~~
+            VITIS_LOOP_721_3: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18717:13: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18719:17: warning: Added loop label VITIS_LOOP_723_4:   [xilinx-label-all-loops]
+                for (int ch = 0; ch < DataType<T, NPPC>::channel; ch++) {
+                ^~~
+                VITIS_LOOP_723_4: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18719:17: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18757:5: warning: Added loop label VITIS_LOOP_761_1:   [xilinx-label-all-loops]
+    for (int r = 0; r < rows; r++) {
+    ^~~
+    VITIS_LOOP_761_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18757:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18758:9: warning: Added loop label VITIS_LOOP_762_2:   [xilinx-label-all-loops]
+        for (int c = 0; c < cols; c++) {
+        ^~~
+        VITIS_LOOP_762_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18758:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18760:13: warning: Added loop label VITIS_LOOP_764_3:   [xilinx-label-all-loops]
+            for (int ch = 0; ch < DataType<T, NPPC>::channel; ch++) {
+            ^~~
+            VITIS_LOOP_764_3: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18760:13: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18761:17: warning: Added loop label VITIS_LOOP_765_4:   [xilinx-label-all-loops]
+                for (int b = 0; b < cv_nbytes; ++b) {
+                ^~~
+                VITIS_LOOP_765_4: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18761:17: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18815:5: warning: Added loop label VITIS_LOOP_819_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < rows; i++) {
+    ^~~
+    VITIS_LOOP_819_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18815:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18816:9: warning: Added loop label VITIS_LOOP_820_2:   [xilinx-label-all-loops]
+        for (int j = 0; j<cols>> (xfNPixelsPerCycle<NPPC>::datashift); j++) {
+        ^~~
+        VITIS_LOOP_820_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18816:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18824:13: warning: Added loop label VITIS_LOOP_828_3:   [xilinx-label-all-loops]
+            for (int k = 0; k < (1 << (xfNPixelsPerCycle<NPPC>::datashift)); k++) {
+            ^~~
+            VITIS_LOOP_828_3: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18824:13: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:18937:9: error: Invalid Directive: for current device, mul + dsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=mul_rows_cols op=mul impl=dsp latency=2
+        ^
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:19009:2: warning: Added loop label VITIS_LOOP_1021_1:   [xilinx-label-all-loops]
+ for (c = 0; c < cols_addrbound; c++) {
+ ^~~
+ VITIS_LOOP_1021_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:19009:2: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:19417:13: warning: Added loop label VITIS_LOOP_1429_1:   [xilinx-label-all-loops]
+            for (int rowIdx = 0, offset = 0; rowIdx < rows; rowIdx++, offset += offset_1row) {
+            ^~~
+            VITIS_LOOP_1429_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:19417:13: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:19445:13: warning: Added loop label VITIS_LOOP_1457_1:   [xilinx-label-all-loops]
+            for (int rowIdx = 0, offset = 0; rowIdx < rows; rowIdx++, offset += offset_1row) {
+            ^~~
+            VITIS_LOOP_1457_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:19445:13: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:19475:13: warning: Added loop label VITIS_LOOP_1487_1:   [xilinx-label-all-loops]
+            for (int rowIdx = 0, offset = 0; rowIdx < rows; rowIdx++, offset += offset_1row) {
+            ^~~
+            VITIS_LOOP_1487_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:19475:13: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:19505:13: warning: Added loop label VITIS_LOOP_1517_1:   [xilinx-label-all-loops]
+            for (int rowIdx = 0, offset = 0; rowIdx < rows; rowIdx++, offset += offset_1row) {
+            ^~~
+            VITIS_LOOP_1517_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:19505:13: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20045:5: warning: Added loop label VITIS_LOOP_122_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS; i++) {
+    ^~~
+    VITIS_LOOP_122_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20045:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20049:2: warning: Added loop label VITIS_LOOP_126_2:   [xilinx-label-all-loops]
+ for (j = 0; j < COLS - 1; j++) {
+ ^~~
+ VITIS_LOOP_126_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20049:2: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20076:5: warning: Added loop label VITIS_LOOP_166_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS; i++) {
+    ^~~
+    VITIS_LOOP_166_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20076:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20080:2: warning: Added loop label VITIS_LOOP_170_2:   [xilinx-label-all-loops]
+ for (j = COLS - 1; j > 0; j--) {
+ ^~~
+ VITIS_LOOP_170_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20080:2: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20107:5: warning: Added loop label VITIS_LOOP_210_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS - 1; i++) {
+    ^~~
+    VITIS_LOOP_210_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20107:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20111:2: warning: Added loop label VITIS_LOOP_214_2:   [xilinx-label-all-loops]
+ for (j = 0; j < COLS; j++) {
+ ^~~
+ VITIS_LOOP_214_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20111:2: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20138:5: warning: Added loop label VITIS_LOOP_254_1:   [xilinx-label-all-loops]
+    for (i = ROWS - 1; i > 0; i--) {
+    ^~~
+    VITIS_LOOP_254_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20138:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20142:2: warning: Added loop label VITIS_LOOP_258_2:   [xilinx-label-all-loops]
+ for (j = 0; j < COLS; j++) {
+ ^~~
+ VITIS_LOOP_258_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20142:2: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20188:5: warning: Added loop label VITIS_LOOP_330_1:   [xilinx-label-all-loops]
+    for (j = 0; j < COLS; j++) {
+    ^~~
+    VITIS_LOOP_330_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20188:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20251:5: warning: Added loop label VITIS_LOOP_435_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS; i++) {
+    ^~~
+    VITIS_LOOP_435_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20251:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20448:44: error: Invalid Directive: for current device, RAM_1P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_1P impl=BRAM
+                                           ^
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20453:44: error: Invalid Directive: for current device, RAM_1P + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_1P impl=URAM
+                                           ^
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20458:44: error: Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_2P impl=BRAM
+                                           ^
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20463:44: error: Invalid Directive: for current device, RAM_2P + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_2P impl=URAM
+                                           ^
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20468:44: error: Invalid Directive: for current device, RAM_S2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_S2P impl=BRAM
+                                           ^
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20473:44: error: Invalid Directive: for current device, RAM_S2P + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_S2P impl=URAM
+                                           ^
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20478:44: error: Invalid Directive: for current device, RAM_T2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_T2P impl=BRAM
+                                           ^
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20483:44: error: Invalid Directive: for current device, RAM_T2P + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=val type=RAM_T2P impl=URAM
+                                           ^
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20539:5: warning: Added loop label VITIS_LOOP_824_1:   [xilinx-label-all-loops]
+    for (i = ROWS - 1; i > 0; i--) {
+    ^~~
+    VITIS_LOOP_824_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20539:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20565:5: warning: Added loop label VITIS_LOOP_867_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS - 1; i++) {
+    ^~~
+    VITIS_LOOP_867_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20565:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20621:5: warning: Added loop label VITIS_LOOP_968_1:   [xilinx-label-all-loops]
+    for (i = 0; i < ROWS; i++) {
+    ^~~
+    VITIS_LOOP_968_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20621:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20717:5: warning: Added loop label VITIS_LOOP_39_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_39_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20717:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20736:5: warning: Added loop label VITIS_LOOP_58_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_58_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20736:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20764:5: warning: Added loop label VITIS_LOOP_86_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_86_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20764:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20797:5: warning: Added loop label VITIS_LOOP_119_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_119_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20797:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20831:5: warning: Added loop label VITIS_LOOP_153_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_153_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20831:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20859:5: warning: Added loop label VITIS_LOOP_181_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_181_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20859:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20883:5: warning: Added loop label VITIS_LOOP_205_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_205_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20883:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20906:5: warning: Added loop label VITIS_LOOP_228_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < loopcount; i++) {
+    ^~~
+    VITIS_LOOP_228_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20906:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20941:5: warning: Added loop label VITIS_LOOP_263_1:   [xilinx-label-all-loops]
+    for (uint16_t r = 0; r < K_ROWS; r++) {
+    ^~~
+    VITIS_LOOP_263_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20941:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20943:2: warning: Added loop label VITIS_LOOP_265_2:   [xilinx-label-all-loops]
+ for (uint16_t c = 0; c < K_COLS; c++) {
+ ^~~
+ VITIS_LOOP_265_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:20943:2: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21003:5: warning: Added loop label VITIS_LOOP_325_1:   [xilinx-label-all-loops]
+    for (ap_int<9> i = 0; i < loopIter; i++) {
+    ^~~
+    VITIS_LOOP_325_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21003:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21075:5: warning: Added loop label VITIS_LOOP_397_1:   [xilinx-label-all-loops]
+    for (i = 0; i < 6; i++, ind++) {
+    ^~~
+    VITIS_LOOP_397_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21075:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21146:5: warning: Added loop label VITIS_LOOP_468_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < imheight; i++) {
+    ^~~
+    VITIS_LOOP_468_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21146:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21151:2: warning: Added loop label VITIS_LOOP_473_2:   [xilinx-label-all-loops]
+ for (int j = 0; j < (imwidth >> NPC); j++) {
+ ^~~
+ VITIS_LOOP_473_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21151:2: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21177:9: warning: Added loop label VITIS_LOOP_499_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < loop_count; i++) {
+        ^~~
+        VITIS_LOOP_499_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21177:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21283:9: warning: Added loop label VITIS_LOOP_623_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < loop_count; i++) {
+        ^~~
+        VITIS_LOOP_623_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21283:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21397:9: warning: Added loop label VITIS_LOOP_737_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < loop_count; i++) {
+        ^~~
+        VITIS_LOOP_737_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21397:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21429:9: warning: Added loop label VITIS_LOOP_788_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < loop_count; i++) {
+        ^~~
+        VITIS_LOOP_788_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:21429:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22043:5: warning: Added loop label VITIS_LOOP_595_1:   [xilinx-label-all-loops]
+    for (ap_uint<8> c = 0, k = 0; c < PLANES; c++, k += out_step) {
+    ^~~
+    VITIS_LOOP_595_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22043:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22047:9: warning: Added loop label VITIS_LOOP_599_2:   [xilinx-label-all-loops]
+        for (ap_int<8> m = 0; m < F_HEIGHT; m++) {
+        ^~~
+        VITIS_LOOP_599_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22047:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22174:13: warning: Added loop label VITIS_LOOP_726_1:   [xilinx-label-all-loops]
+            for (ap_int<8> row = 0; row < K_HEIGHT; row++)
+            ^~~
+            VITIS_LOOP_726_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22174:13: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22175:17: warning: Added loop label VITIS_LOOP_727_2:   [xilinx-label-all-loops]
+                for (ap_int<8> col = K_WIDTH - 1; col >= 1; col--)
+                ^~~
+                VITIS_LOOP_727_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22175:17: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22178:13: warning: Added loop label VITIS_LOOP_730_3:   [xilinx-label-all-loops]
+            for (ap_int<8> buf_row = 0; buf_row < K_HEIGHT; buf_row++) {
+            ^~~
+            VITIS_LOOP_730_3: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22178:13: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22195:21: warning: Added loop label VITIS_LOOP_747_4:   [xilinx-label-all-loops]
+                    for (ap_int<8> buf_row = K_HEIGHT - 1; buf_row >= 1; buf_row--) {
+                    ^~~
+                    VITIS_LOOP_747_4: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22195:21: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22210:21: warning: Added loop label VITIS_LOOP_762_5:   [xilinx-label-all-loops]
+                    for (int buf_row = 0; buf_row < K_HEIGHT; buf_row++) {
+                    ^~~
+                    VITIS_LOOP_762_5: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22210:21: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22214:21: warning: Added loop label VITIS_LOOP_766_6:   [xilinx-label-all-loops]
+                    for (int buf_row = 0; buf_row < K_HEIGHT; buf_row++) {
+                    ^~~
+                    VITIS_LOOP_766_6: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22214:21: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22225:17: warning: Added loop label VITIS_LOOP_777_7:   [xilinx-label-all-loops]
+                for (int buf_row = 0; buf_row < K_HEIGHT; buf_row++) {
+                ^~~
+                VITIS_LOOP_777_7: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22225:17: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22282:2: warning: Added loop label VITIS_LOOP_834_1:   [xilinx-label-all-loops]
+ for (unsigned char i = 0; i < FILTER_HEIGHT; i++) {
+ ^~~
+ VITIS_LOOP_834_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22282:2: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22283:9: warning: Added loop label VITIS_LOOP_835_2:   [xilinx-label-all-loops]
+        for (unsigned char j = 0; j < FILTER_WIDTH; j++) {
+        ^~~
+        VITIS_LOOP_835_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22283:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22326:5: warning: Added loop label VITIS_LOOP_9_1:   [xilinx-label-all-loops]
+    for (int y = 0; y < OUTPUT_WIDTH; ++y) {
+    ^~~
+    VITIS_LOOP_9_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22326:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22327:9: warning: Added loop label VITIS_LOOP_10_2:   [xilinx-label-all-loops]
+        for (int x = 0; x < OUTPUT_WIDTH; ++x) {
+        ^~~
+        VITIS_LOOP_10_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22327:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22332:13: warning: Added loop label VITIS_LOOP_15_3:   [xilinx-label-all-loops]
+            for (int dy = 0; dy < 2; ++dy) {
+            ^~~
+            VITIS_LOOP_15_3: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22332:13: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22333:17: warning: Added loop label VITIS_LOOP_16_4:   [xilinx-label-all-loops]
+                for (int dx = 0; dx < 2; ++dx) {
+                ^~~
+                VITIS_LOOP_16_4: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22333:17: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22360:5: warning: Added loop label VITIS_LOOP_43_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < rows; ++i) {
+    ^~~
+    VITIS_LOOP_43_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22360:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22361:9: warning: Added loop label VITIS_LOOP_44_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < cols; ++j) {
+        ^~~
+        VITIS_LOOP_44_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22361:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22372:5: warning: Added loop label VITIS_LOOP_55_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < rows; ++i) {
+    ^~~
+    VITIS_LOOP_55_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22372:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22373:9: warning: Added loop label VITIS_LOOP_56_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < cols; ++j) {
+        ^~~
+        VITIS_LOOP_56_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22373:9: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22386:5: warning: Added loop label VITIS_LOOP_69_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < rows; ++i) {
+    ^~~
+    VITIS_LOOP_69_1: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22386:5: note: FIX-IT applied suggested code changes
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22387:9: warning: Added loop label VITIS_LOOP_70_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < cols; ++j) {
+        ^~~
+        VITIS_LOOP_70_2: 
+/home/kedhar/Vitis_Libraries/vision/L1/examples/customconv/customconv_ked.prj/sol1/.autopilot/db/xf_custom_convolution_accel.pp.0.cpp:22387:9: note: FIX-IT applied suggested code changes

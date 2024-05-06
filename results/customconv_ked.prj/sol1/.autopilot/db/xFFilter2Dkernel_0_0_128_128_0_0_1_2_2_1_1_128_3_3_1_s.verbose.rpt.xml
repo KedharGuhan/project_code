@@ -1,0 +1,200 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'xFFilter2Dkernel_0_0_128_128_0_0_1_2_2_1_1_128_3_3_1_s'" level="0">
+<item name = "Date">Sat May  4 12:09:36 2024
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">customconv_ked.prj</item>
+<item name = "Solution">sol1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.30 ns, 3.635 ns, 0.89 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">181, 4297523341, 0.658 us, 15.619 sec, 181, 4297523341, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196">xFFilter2Dkernel_Pipeline_COL_LOOP, 31, 65566, 0.113 us, 0.238 ms, 31, 65566, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- ROW_LOOP">180, 4297523340, 36 ~ 65571, -, -, 5 ~ 65540, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 327, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">3, 9, 2820, 1301, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 56, -</column>
+<column name="Register">-, -, 260, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 4, 2, 3, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196">xFFilter2Dkernel_Pipeline_COL_LOOP, 3, 9, 2820, 1301, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ImagLocy_fu_288_p2">+, 0, 0, 16, 16, 4</column>
+<column name="heightloop_fu_239_p2">+, 0, 0, 17, 17, 3</column>
+<column name="i_2_fu_282_p2">+, 0, 0, 16, 16, 1</column>
+<column name="sub62_fu_255_p2">+, 0, 0, 17, 17, 2</column>
+<column name="widthloop_fu_249_p2">+, 0, 0, 17, 17, 2</column>
+<column name="y_1_fu_416_p2">+, 0, 0, 17, 17, 2</column>
+<column name="y_2_fu_344_p2">+, 0, 0, 17, 17, 3</column>
+<column name="locy_1_fu_454_p2">-, 0, 0, 3, 2, 2</column>
+<column name="locy_2_fu_478_p2">-, 0, 0, 3, 2, 2</column>
+<column name="locy_fu_411_p2">-, 0, 0, 3, 2, 2</column>
+<column name="brmerge_not_fu_360_p2">and, 0, 0, 1, 1, 1</column>
+<column name="or_cond25_fu_397_p2">and, 0, 0, 1, 1, 1</column>
+<column name="or_cond26_fu_440_p2">and, 0, 0, 1, 1, 1</column>
+<column name="cmp179_1_fu_459_p2">icmp, 0, 0, 17, 17, 17</column>
+<column name="cmp1_i18_fu_393_p2">icmp, 0, 0, 17, 17, 17</column>
+<column name="cmp204_fu_294_p2">icmp, 0, 0, 16, 16, 3</column>
+<column name="cmp57_fu_318_p2">icmp, 0, 0, 16, 16, 2</column>
+<column name="cmp_i17_1_fu_425_p2">icmp, 0, 0, 16, 16, 1</column>
+<column name="empty_45_fu_466_p2">icmp, 0, 0, 17, 17, 17</column>
+<column name="icmp_fu_350_p2">icmp, 0, 0, 15, 15, 1</column>
+<column name="icmp_ln707_fu_277_p2">icmp, 0, 0, 17, 17, 17</column>
+<column name="notrhs_fu_355_p2">icmp, 0, 0, 17, 17, 17</column>
+<column name="slt57_fu_430_p2">icmp, 0, 0, 17, 17, 17</column>
+<column name="slt_fu_326_p2">icmp, 0, 0, 17, 17, 17</column>
+<column name="brmerge30_fu_366_p2">or, 0, 0, 1, 1, 1</column>
+<column name="ref_fu_337_p3">select, 0, 0, 3, 1, 2</column>
+<column name="t_1_fu_446_p3">select, 0, 0, 2, 1, 2</column>
+<column name="t_2_fu_470_p3">select, 0, 0, 2, 1, 2</column>
+<column name="t_fu_403_p3">select, 0, 0, 2, 1, 2</column>
+<column name="rev56_fu_331_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="rev58_fu_434_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="rev_fu_388_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">29, 7, 1, 7</column>
+<column name="i_fu_96">9, 2, 16, 32</column>
+<column name="imgInput_data_read">9, 2, 1, 2</column>
+<column name="imgOutput_data_write">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ImagLocy_cast_reg_647">17, 0, 17, 0</column>
+<column name="ImagLocy_reg_623">16, 0, 16, 0</column>
+<column name="ap_CS_fsm">6, 0, 6, 0</column>
+<column name="brmerge30_reg_668">1, 0, 1, 0</column>
+<column name="cmp179_1_reg_703">1, 0, 1, 0</column>
+<column name="cmp1_i18_reg_688">1, 0, 1, 0</column>
+<column name="cmp204_reg_631">1, 0, 1, 0</column>
+<column name="empty_45_reg_708">1, 0, 1, 0</column>
+<column name="grp_xFFilter2Dkernel_Pipeline_COL_LOOP_fu_196_ap_start_reg">1, 0, 1, 0</column>
+<column name="heightloop_reg_594">17, 0, 17, 0</column>
+<column name="i_2_reg_618">16, 0, 16, 0</column>
+<column name="i_fu_96">16, 0, 16, 0</column>
+<column name="locy_1_reg_698">2, 0, 2, 0</column>
+<column name="locy_2_reg_713">2, 0, 2, 0</column>
+<column name="locy_reg_693">2, 0, 2, 0</column>
+<column name="ref_reg_655">2, 0, 2, 0</column>
+<column name="src_kernel_win_1_fu_104">8, 0, 8, 0</column>
+<column name="src_kernel_win_2_fu_108">8, 0, 8, 0</column>
+<column name="src_kernel_win_3_fu_112">8, 0, 8, 0</column>
+<column name="src_kernel_win_3_load_reg_678">8, 0, 8, 0</column>
+<column name="src_kernel_win_4_fu_116">8, 0, 8, 0</column>
+<column name="src_kernel_win_5_fu_120">8, 0, 8, 0</column>
+<column name="src_kernel_win_5_load_reg_683">8, 0, 8, 0</column>
+<column name="src_kernel_win_fu_100">8, 0, 8, 0</column>
+<column name="src_kernel_win_load_reg_673">8, 0, 8, 0</column>
+<column name="sub62_reg_604">17, 0, 17, 0</column>
+<column name="tmp_6_reg_718">1, 0, 1, 0</column>
+<column name="tmp_7_reg_642">15, 0, 15, 0</column>
+<column name="tmp_reg_636">1, 0, 1, 0</column>
+<column name="trunc_ln707_reg_610">2, 0, 2, 0</column>
+<column name="widthloop_reg_599">17, 0, 17, 0</column>
+<column name="y_2_reg_662">17, 0, 17, 0</column>
+<column name="zext_ln695_reg_586">16, 0, 17, 1</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, xFFilter2Dkernel&lt;0, 0, 128, 128, 0, 0, 1, 2, 2, 1, 1, 128, 3, 3, 1&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, xFFilter2Dkernel&lt;0, 0, 128, 128, 0, 0, 1, 2, 2, 1, 1, 128, 3, 3, 1&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, xFFilter2Dkernel&lt;0, 0, 128, 128, 0, 0, 1, 2, 2, 1, 1, 128, 3, 3, 1&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, xFFilter2Dkernel&lt;0, 0, 128, 128, 0, 0, 1, 2, 2, 1, 1, 128, 3, 3, 1&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, xFFilter2Dkernel&lt;0, 0, 128, 128, 0, 0, 1, 2, 2, 1, 1, 128, 3, 3, 1&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, xFFilter2Dkernel&lt;0, 0, 128, 128, 0, 0, 1, 2, 2, 1, 1, 128, 3, 3, 1&gt;, return value</column>
+<column name="imgInput_data_dout">in, 8, ap_fifo, imgInput_data, pointer</column>
+<column name="imgInput_data_num_data_valid">in, 3, ap_fifo, imgInput_data, pointer</column>
+<column name="imgInput_data_fifo_cap">in, 3, ap_fifo, imgInput_data, pointer</column>
+<column name="imgInput_data_empty_n">in, 1, ap_fifo, imgInput_data, pointer</column>
+<column name="imgInput_data_read">out, 1, ap_fifo, imgInput_data, pointer</column>
+<column name="imgOutput_data_din">out, 8, ap_fifo, imgOutput_data, pointer</column>
+<column name="imgOutput_data_num_data_valid">in, 3, ap_fifo, imgOutput_data, pointer</column>
+<column name="imgOutput_data_fifo_cap">in, 3, ap_fifo, imgOutput_data, pointer</column>
+<column name="imgOutput_data_full_n">in, 1, ap_fifo, imgOutput_data, pointer</column>
+<column name="imgOutput_data_write">out, 1, ap_fifo, imgOutput_data, pointer</column>
+<column name="p_filter_kernel_0_0_val1">in, 16, ap_none, p_filter_kernel_0_0_val1, scalar</column>
+<column name="p_filter_kernel_0_1_val2">in, 16, ap_none, p_filter_kernel_0_1_val2, scalar</column>
+<column name="p_filter_kernel_0_2_val3">in, 16, ap_none, p_filter_kernel_0_2_val3, scalar</column>
+<column name="p_filter_kernel_1_0_val4">in, 16, ap_none, p_filter_kernel_1_0_val4, scalar</column>
+<column name="p_filter_kernel_1_1_val5">in, 16, ap_none, p_filter_kernel_1_1_val5, scalar</column>
+<column name="p_filter_kernel_1_2_val6">in, 16, ap_none, p_filter_kernel_1_2_val6, scalar</column>
+<column name="p_filter_kernel_2_0_val7">in, 16, ap_none, p_filter_kernel_2_0_val7, scalar</column>
+<column name="p_filter_kernel_2_1_val8">in, 16, ap_none, p_filter_kernel_2_1_val8, scalar</column>
+<column name="p_filter_kernel_2_2_val9">in, 16, ap_none, p_filter_kernel_2_2_val9, scalar</column>
+<column name="shift">in, 8, ap_none, shift, scalar</column>
+<column name="rows">in, 16, ap_none, rows, scalar</column>
+<column name="cols">in, 16, ap_none, cols, scalar</column>
+</table>
+</item>
+</section>
+</profile>
